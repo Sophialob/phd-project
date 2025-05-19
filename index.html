@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
     <title>Study Information Sheet</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
@@ -14,6 +14,7 @@
         a:hover { text-decoration: underline; }
         .language-section { display: none; }
         .language-section.active { display: block; }
+        img.logo { display: block; margin: 0 auto 10px; max-width: 150px; height: auto; }
     </style>
     <script>
         function switchLanguage(lang) {
@@ -22,7 +23,6 @@
             });
             document.querySelector(`#lang-${lang}`).classList.add('active');
         }
-
         document.addEventListener('DOMContentLoaded', function() {
             switchLanguage('en'); // Default to English
         });
@@ -30,6 +30,7 @@
 </head>
 <body>
     <header>
+        <img src="https://via.placeholder.com/150x50?text=Logo" alt="Logo" class="logo" />
         <h1>Study Information Sheet</h1>
         <select onchange="switchLanguage(this.value)">
             <option value="en">English</option>
@@ -49,3 +50,4 @@
         </div>
     </main>
 </body>
+</html>
