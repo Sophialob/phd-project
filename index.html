@@ -1,89 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
-    <title>Study Information Sheet</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: white;
-            color: #333;
-            padding: 20px 0;
-            text-align: center;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .language-section {
-            display: none;
-        }
-        .language-section.active {
-            display: block;
-        }
-        img.logo {
-            max-width: 200px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 20px;
-        }
-    </style>
-    <script>
-        function switchLanguage(lang) {
-            document.querySelectorAll('.language-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.querySelector(`#lang-${lang}`).classList.add('active');
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            switchLanguage('en'); // Default to English
-        });
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
+  <title>Study Information Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: white;
+      color: #333;
+      padding: 20px 0;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .language-section {
+      display: none;
+    }
+    .language-section.active {
+      display: block;
+    }
+    img.logo {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+    }
+  </style>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('.language-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.querySelector(`#lang-${lang}`).classList.add('active');
+
+      document.querySelectorAll('.header-text').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.querySelector(`#header-${lang}`).style.display = 'inline';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      switchLanguage('en'); // Default to English
+    });
+  </script>
 </head>
 <body>
-    <header>
-        <img src="assets/LSHTM square.png" alt="Logo" class="logo" />
-        <h1>Coping and help-seeking among Ukrainian adolescent girls and young women in the UK</h1>
-        <select onchange="switchLanguage(this.value)">
-            <option value="en">English</option>
-            <option value="uk">Ukrainian</option>
-        </select>
-    </header>
+  <header>
+    <img src="https://via.placeholder.com/400x100?text=Logo" alt="Logo" class="logo" />
+    <h1>
+      <span class="header-text" id="header-en">Study Information Sheet</span>
+      <span class="header-text" id="header-uk" style="display:none;">Інформаційний лист дослідження</span>
+    </h1>
+    <select onchange="switchLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="uk">Ukrainian</option>
+    </select>
+  </header>
 
-    <main>
-        <div id="lang-en" class="language-section active">
-            <h2>Study Information (English)</h2>
-            <p>This PhD project aims to explore coping and help-seeking among Ukrainian adolescent girls and young women (aged 15-24 years old) living in the UK since the Russia-Ukraine war.</p>
-        </div>
+  <main>
+    <div id="lang-en" class="language-section active">
+      <h2>Coping and help seeking</h2>
+      <p>This PhD project aims to explore coping and help-seeking among Ukrainian adolescent girls and young women (aged 15-24 years old) living in the UK since the Russia-Ukraine war.</p>
+    </div>
 
-        <div id="lang-uk" class="language-section">
-            <h2>Інформація про дослідження (Українська)</h2>
-            <p>Цей проєкт має на меті дослідити стратегії подолання та звернення за допомогою серед українських підлітків та молодих жінок (віком 15-24 років), які проживають у Великій Британії.</p>
-        </div>
-    </main>
+    <div id="lang-uk" class="language-section">
+      <h2>Інформація про дослідження</h2>
+      <p>Цей проєкт має на меті дослідити стратегії подолання та звернення за допомогою серед українських підлітків та молодих жінок (віком 15-24 років), які проживають у Великій Британії.</p>
+    </div>
+  </main>
 </body>
 </html>
