@@ -1,8 +1,24 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-- jekyll-remote-theme 
+# GitHub Pages Configuration for Jekyll
 
-title: My site
-description: Just a simple Jekyll site
-theme: minima
-logo: assests/logo.png
+# Set the source directory (using root directory)
+source: /
+
+theme: jekyll-theme-primer
+
+# Set the base URL (if you are using a custom domain, replace this)
+url: "https://sophialob.github.io/phd-project"
+baseurl: ""
+
+# Exclude any unnecessary files from the build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Markdown configuration
+markdown: CommonMarkGhPages
+
+# Enable plugins
+plugins:
+jekyll-remote-theme 
+  - jekyll-titles-from-headingsremote_theme: pages-themes/minimal@v0.2.0
