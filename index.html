@@ -12,47 +12,40 @@
         h1, h2, h3 { color: #2c3e50; }
         a { color: #2980b9; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .language-selector { margin-bottom: 20px; }
         .language-section { display: none; }
         .language-section.active { display: block; }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            switchLanguage('en'); // Default to English
-        });
-
         function switchLanguage(lang) {
             document.querySelectorAll('.language-section').forEach(section => {
                 section.classList.remove('active');
             });
             document.querySelector(`#lang-${lang}`).classList.add('active');
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage('en'); // Default to English
+        });
     </script>
 </head>
 <body>
     <header>
         <h1>Study Information Sheet</h1>
+        <select onchange="switchLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="uk">Ukrainian</option>
+        </select>
     </header>
 
     <main>
-        <div class="language-selector">
-            <label for="language">Choose Language: </label>
-            <select onchange="switchLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="uk">Ukrainian</option>
-            </select>
-        </div>
-
-        <div id="lang-en" class="language-section">
+        <div id="lang-en" class="language-section active">
             <h2>Study Information (English)</h2>
-            <p>This PhD project aims to explore coping and help-seeking among Ukrainian adolescent girls and young women (aged 15-24) living in the UK.</p>
+            <p>This PhD project aims to explore coping and help-seeking among Ukrainian adolescent girls and young women (aged 15-24 years old) living in the UK since the Russia-Ukraine war.</p>
         </div>
 
         <div id="lang-uk" class="language-section">
             <h2>Інформація про дослідження (Українська)</h2>
-            <p>Цей проєкт докторантури має на меті дослідити стратегії подолання та звернення за допомогою серед українських підлітків та молодих жінок (віком 15-24 років), які проживають у Великій Британії.</p>
+            <p>Цей проєкт має на меті дослідити стратегії подолання та звернення за допомогою серед українських підлітків та молодих жінок (віком 15-24 років), які проживають у Великій Британії.</p>
         </div>
-
     </main>
 </body>
-</html>
