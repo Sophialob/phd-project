@@ -14,7 +14,15 @@
         a:hover { text-decoration: underline; }
         .language-section { display: none; }
         .language-section.active { display: block; }
-        img.logo { display: block; margin: 0 auto 10px; max-width: 150px; height: auto; }
+
+        /* Bigger logo style */
+        img.logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
     </style>
     <script>
         function switchLanguage(lang) {
@@ -30,7 +38,7 @@
 </head>
 <body>
     <header>
-        <img src="assets/LSHTM square.png" alt="Logo" class="logo" />
+        <img src="https://via.placeholder.com/400x100?text=Logo" alt="Logo" class="logo" />
         <h1>Study Information Sheet</h1>
         <select onchange="switchLanguage(this.value)">
             <option value="en">English</option>
