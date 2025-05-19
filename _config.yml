@@ -6,7 +6,7 @@ source: /
 theme: jekyll-theme-primer
 
 # Set the base URL (if you are using a custom domain, replace this)
-url: "https://sophialob.github.io/phd-project"
+url: "https://your-username.github.io/your-repository-name"
 baseurl: ""
 
 # Exclude any unnecessary files from the build
@@ -20,5 +20,18 @@ markdown: CommonMarkGhPages
 
 # Enable plugins
 plugins:
-jekyll-remote-theme 
-  - jekyll-titles-from-headingsremote_theme: pages-themes/minimal@v0.2.0
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# Pagination (if needed)
+pagination:
+  enabled: true
