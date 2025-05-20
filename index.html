@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
@@ -28,11 +27,11 @@
       margin-bottom: 20px;
     }
     .logo {
-      max-height: 150px; /* bigger logos */
+      max-height: 150px;
       width: auto;
       display: block;
     }
-     main {
+    main {
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
@@ -42,11 +41,11 @@
     }
     h1, h2, h3 {
       color: #2c3e50;
-      font-weight: bold; /* Bold for H1 and H2 and H3 */
+      font-weight: bold;
     }
     p {
-    font-weight: normal; /* Normal font weight for paragraph text */
-  }
+      font-weight: normal;
+    }
     a {
       color: #2980b9;
       text-decoration: none;
@@ -60,7 +59,43 @@
     .language-section.active {
       display: block;
     }
-  </style>  <script>
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+    .sidebar {
+      width: 200px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      overflow-y: auto;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .main {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    }
+  </style>
+  <script>
     function switchLanguage(lang) {
       document.querySelectorAll('.language-section').forEach(section => {
         section.classList.remove('active');
@@ -73,48 +108,10 @@
       document.querySelector(`#header-${lang}`).style.display = 'inline';
     }
     document.addEventListener('DOMContentLoaded', function() {
-      switchLanguage('en'); // Default to English
+      switchLanguage('en');
     });
   </script>
 </head>
-
-  <style>
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .sidebar {
-    width: 200px;
-    padding: 20px;
-    background-color: #f0f0f0;
-  }
-
-    .sidebar ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.sidebar li {
-  margin-bottom: 10px; /* optional spacing between links */
-}
-
-  .sidebar {
-  width: 200px;
-  padding: 20px;
-  background-color: #f0f0f0;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  overflow-y: auto;
-}
-  .main {
-    flex-grow: 1;
-    padding: 20px;
-  }
-</style>
-
 <body>
   <header>
     <div class="logo-container">
@@ -131,26 +128,31 @@
     </select>
   </header>
 
-  <!-- Container for sidebar and content -->
   <div class="container">
-    
-    <!-- Sidebar (left side) -->
+
     <div id="contents" class="sidebar">
-      <h3>Contents</h3>
-      <ul>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#methods">Methods</a></li>
-        <li><a href="#results">Results</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
+  <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
+  <ul>
+    <li><a href="#intro" class="sidebar-text" id="link-intro-en">Introduction</a>
+        <a href="#intro" class="sidebar-text" id="link-intro-uk" style="display:none;">Вступ</a>
+    </li>
+    <li><a href="#methods" class="sidebar-text" id="link-methods-en">Methods</a>
+        <a href="#methods" class="sidebar-text" id="link-methods-uk" style="display:none;">Методи</a>
+    </li>
+    <li><a href="#results" class="sidebar-text" id="link-results-en">Results</a>
+        <a href="#results" class="sidebar-text" id="link-results-uk" style="display:none;">Результати</a>
+    </li>
+    <li><a href="#contact" class="sidebar-text" id="link-contact-en">Contact</a>
+        <a href="#contact" class="sidebar-text" id="link-contact-uk" style="display:none;">Контактна інформація</a>
+    </li>
+  </ul>
+</div>
 
-    </div>
-
-    <!-- Main content area (right side) -->
     <main class="main">
       <!-- English Content -->
       <div id="lang-en" class="language-section active">
-        <h2 id="intro">Participant Information</h2>
+      <h2 id="intro">Participant Information</h2>
     
 <h3> Introduction</h3>
 <p>We would like to invite you to take part in this PhD research study. Joining the study is entirely up to you. Before you decide if you would like to participate, you need to understand why the research is being done and what it would involve. Please take your time to decide whether you would like to take part. </p>
@@ -207,8 +209,8 @@ All information we collect during this study will be anonymous and stored secure
     </div>
 
     <!-- Ukrainian Content -->
-      <div id="lang-uk" class="language-section">
-        <h2 id="intro">Інформація для</h2>
+       <div id="lang-uk" class="language-section">
+  <h2 id="intro">Вступ</h2>
   
 <h3> Вступ</h3>
 <p> Ми хотіли б запросити вас взяти участь у цьому дисертаційному дослідженні.  Участь у дослідженні повністю залежить від вас. Перш, ніж вирішити, чи хотіли б ви взяти участь, вам потрібно зрозуміти, навіщо проводиться дослідження і що воно передбачає.Подумайте та дозвольте собі стільки часу скільки ви потребуєте щоб вирішити, чи хотіли би ви взяти участь. </p>
@@ -261,15 +263,15 @@ All information we collect during this study will be anonymous and stored secure
 <p> Дякуємо, що знайшли час, щоб прочитати цю інформацію. Якщо ви вважаєте, що бажаєте взяти участь у дослідженні, перейдіть на <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6">натисніть тут</a></p., <p> де вас попросять підтвердити вашу відповідність вимогам і надати вашу інформовану згоду. Після того як ви надасте свою згоду, ви зможете взяти участь в опитуванні.
 Якщо у вас виникли запитання щодо цього дослідження, будь ласка, зв’яжіться з головним дослідником, відповідальним за цей проект (Софія Лобанов-Ростовська, <a href="mailto: sophia.lobanov-rostovsky@lshtm.ac.uk">sophia.lobanov-rostovsky@lshtm.ac.uk</a>).</p>
 
-         <h2 id="methods">Методи</h2>
-        <p>Методи дослідження.</p>
+    <h2 id="methods">Методи</h2>
+  <p>Методи дослідження.</p>
 
-        <h2 id="results">Результати</h2>
-        <p>Результати дослідження.</p>
+  <h2 id="results">Результати</h2>
+  <p>Результати дослідження.</p>
 
-        <h2 id="contact">Контактна інформація</h2>
-        <p>Контактні дані.</p>
-      </div>
+  <h2 id="contact">Контактна інформація</h2>
+  <p>Контактні дані.</p>
+</div>
     </main>
   </div>   
 
