@@ -3,7 +3,7 @@
 # Set the source directory (using root directory)
 source: /
 
-theme: jekyll-theme-primer
+theme: null
 
 # Set the base URL (if you are using a custom domain, replace this)
 url: "https://your-username.github.io/your-repository-name"
