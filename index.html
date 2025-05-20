@@ -28,7 +28,7 @@
       margin-bottom: 20px;
     }
     .logo {
-      max-height: 150px;
+      max-height: 180px; /* Increased logo size */
       width: auto;
       display: block;
     }
@@ -97,13 +97,13 @@
     }
 
     #top-banner {
-      background-color: #007BFF; /* Bright blue */
+      background-color: #007BFF;
       color: white;
       text-align: center;
       padding: 10px 0;
       font-size: 18px;
       font-weight: bold;
-      position: fixed;  /* Sticks at the top */
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -119,21 +119,9 @@
     #top-banner a:hover {
       color: #cce5ff;
     }
-
-    /* NEW: Smaller header text */
-    h1.header {
-      font-size: 1.5rem; /* smaller than default */
-      line-height: 1.3;
-      margin-bottom: 10px;
-    }
-
-    .header-text {
-      font-size: 1.4rem;
-    }
   </style>
   <script>
   function switchLanguage(lang) {
-    // Hide all language sections
     document.querySelectorAll('.language-section').forEach(section => {
       section.classList.remove('active');
     });
@@ -142,14 +130,12 @@
       langSection.classList.add('active');
     }
 
-    // Toggle header texts
     document.querySelectorAll('.header-text').forEach(el => {
       el.style.display = 'none';
     });
     const header = document.querySelector(`#header-${lang}`);
     if (header) header.style.display = 'inline';
 
-    // Toggle sidebar headers
     document.querySelectorAll('.sidebar-text').forEach(el => {
       el.style.display = 'none';
     });
@@ -157,7 +143,6 @@
       el.style.display = 'block';
     });
 
-    // Toggle sidebar links
     const linkIds = ['info', 'contact', 'survey'];
     linkIds.forEach(id => {
       const enLink = document.querySelector(`#link-${id}-en`);
@@ -169,17 +154,11 @@
       }
     });
 
-    // Toggle top banner survey links
     const bannerEn = document.getElementById('link-survey-banner-en');
     const bannerUk = document.getElementById('link-survey-banner-uk');
     if (bannerEn && bannerUk) {
-      if (lang === 'en') {
-        bannerEn.style.display = 'inline';
-        bannerUk.style.display = 'none';
-      } else if (lang === 'uk') {
-        bannerEn.style.display = 'none';
-        bannerUk.style.display = 'inline';
-      }
+      bannerEn.style.display = (lang === 'en') ? 'inline' : 'none';
+      bannerUk.style.display = (lang === 'uk') ? 'inline' : 'none';
     }
   }
   </script>
