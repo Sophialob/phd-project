@@ -13,6 +13,7 @@
       padding: 0;
       background-color: #f4f4f9;
       color: #333;
+      padding-top: 50px; /* To avoid content hiding behind banner */
     }
     header {
       background-color: white;
@@ -95,7 +96,6 @@
       }
     }
 
-    <style>
     #top-banner {
       background-color: #007BFF; /* Bright blue */
       color: white;
@@ -119,61 +119,55 @@
     #top-banner a:hover {
       color: #cce5ff;
     }
-
-    body {
-      padding-top: 50px; /* To avoid content hiding behind banner */
-    }
   </style>
   <script>
-  function switchLanguage(lang) {
-    // Hide all language sections
-    document.querySelectorAll('.language-section').forEach(section => {
-      section.classList.remove('active');
-    });
-    document.querySelector(`#lang-${lang}`).classList.add('active');
+    function switchLanguage(lang) {
+      // Hide all language sections
+      document.querySelectorAll('.language-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.querySelector(`#lang-${lang}`).classList.add('active');
 
-    // Toggle header texts
-    document.querySelectorAll('.header-text').forEach(el => {
-      el.style.display = 'none';
-    });
-    document.querySelector(`#header-${lang}`).style.display = 'inline';
+      // Toggle header texts
+      document.querySelectorAll('.header-text').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.querySelector(`#header-${lang}`).style.display = 'inline';
 
-    // Toggle sidebar headers
-    document.querySelectorAll('.sidebar-text').forEach(el => {
-      el.style.display = 'none';
-    });
-    document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => {
-      el.style.display = 'block';
-    });
+      // Toggle sidebar headers
+      document.querySelectorAll('.sidebar-text').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => {
+        el.style.display = 'block';
+      });
 
-    // Toggle sidebar links
-const linkIds = ['info', 'contact', 'survey'];
+      // Toggle sidebar links
+      const linkIds = ['info', 'contact', 'survey'];
+      linkIds.forEach(id => {
+        const enLink = document.querySelector(`#link-${id}-en`);
+        const ukLink = document.querySelector(`#link-${id}-uk`);
 
-    linkIds.forEach(id => {
-      const enLink = document.querySelector(`#link-${id}-en`);
-      const ukLink = document.querySelector(`#link-${id}-uk`);
-
-      if (enLink && ukLink) {
-        enLink.style.display = (lang === 'en') ? 'inline' : 'none';
-        ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
-      }
-    });
-  }
-</script>
+        if (enLink && ukLink) {
+          enLink.style.display = (lang === 'en') ? 'inline' : 'none';
+          ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
+        }
+      });
+    }
+  </script>
 </head>
 <body>
   <header>
-
     <div id="top-banner">
-  <a href="https://example.com/survey" target="_self">Click here to take the survey</a>
-</div>
-    
+      <a href="https://example.com/survey" target="_self">Click here to take the survey</a>
+    </div>
+
     <div class="logo-container">
       <img src="assets/LSHTM square.png" alt="Logo 1" class="logo" />
       <img src="assets/USC logo.png" alt="Logo 2" class="logo" />
     </div>
-    
-  <h1 class="header">
+
+    <h1 class="header">
       <span class="header-text" id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
       <span class="header-text" id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
     </h1>
@@ -184,33 +178,31 @@ const linkIds = ['info', 'contact', 'survey'];
   </header>
 
   <div class="container">
-
     <div id="contents" class="sidebar">
-  <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
-  <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
- 
-<ul>
-  <li>
-    <a href="#info" class="sidebar-text" id="link-info-en">Participant Information</a>
-    <a href="#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
-  </li>
+      <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
+      <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
 
-  <li>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-en">Click here to go to the survey</a>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
-  </li>
-
-  <li>
-    <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
-    <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none;" >Довідка та Контактна інформація</a>
-  </li>
-</ul>
-</div> 
+      <ul>
+        <li>
+          <a href="#info" class="sidebar-text" id="link-info-en">Participant Information</a>
+          <a href="#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
+        </li>
+        <li>
+          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-en">Click here to go to the survey</a>
+          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+        </li>
+        <li>
+          <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
+          <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none" >Довідка та Контактна інформація</a>
+        </li>
+      </ul>
+    </div> 
     
     <main class="main">
       <!-- English Content -->
       <div id="lang-en" class="language-section active">
-      <h2 id="info">Participant Information</h2>
+        <h2 id="info">Participant Information</h2>
+    
     
 <h3> Introduction</h3>
 <p>We would like to invite you to take part in this PhD research study. Joining the study is entirely up to you. Before you decide if you would like to participate, you need to understand why the research is being done and what it would involve. Please take your time to decide whether you would like to take part. </p>
