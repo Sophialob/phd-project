@@ -154,9 +154,35 @@
     }
   });
 
+  // Toggle top banner survey links
+  const bannerEn = document.getElementById('link-survey-banner-en');
+  const bannerUk = document.getElementById('link-survey-banner-uk');
+  if (lang === 'en') {
+    bannerEn.style.display = 'inline';
+    bannerUk.style.display = 'none';
+  } else if (lang === 'uk') {
+    bannerEn.style.display = 'none';
+    bannerUk.style.display = 'inline';
+  }
+}
+
+  // Toggle sidebar links
+  const linkIds = ['info', 'contact', 'survey'];
+  linkIds.forEach(id => {
+    const enLink = document.querySelector(`#link-${id}-en`);
+    const ukLink = document.querySelector(`#link-${id}-uk`);
+
+    if (enLink && ukLink) {
+      enLink.style.display = (lang === 'en') ? 'inline' : 'none';
+      ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
+    }
+  });
+
   // Toggle top banner links
-  document.querySelector('#top-banner a:not(#link-survey-banner-uk)').style.display = (lang === 'en') ? 'inline' : 'none';
-  document.querySelector('#link-survey-banner-uk').style.display = (lang === 'uk') ? 'inline' : 'none';
+  <div id="top-banner">
+  <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-en">Click here to go to the survey</a>
+  <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+</div>
 }
     }
   </script>
