@@ -122,37 +122,42 @@
   </style>
   <script>
     function switchLanguage(lang) {
-      // Hide all language sections
-      document.querySelectorAll('.language-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.querySelector(`#lang-${lang}`).classList.add('active');
+  // Hide all language sections
+  document.querySelectorAll('.language-section').forEach(section => {
+    section.classList.remove('active');
+  });
+  document.querySelector(`#lang-${lang}`).classList.add('active');
 
-      // Toggle header texts
-      document.querySelectorAll('.header-text').forEach(el => {
-        el.style.display = 'none';
-      });
-      document.querySelector(`#header-${lang}`).style.display = 'inline';
+  // Toggle header texts
+  document.querySelectorAll('.header-text').forEach(el => {
+    el.style.display = 'none';
+  });
+  document.querySelector(`#header-${lang}`).style.display = 'inline';
 
-      // Toggle sidebar headers
-      document.querySelectorAll('.sidebar-text').forEach(el => {
-        el.style.display = 'none';
-      });
-      document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => {
-        el.style.display = 'block';
-      });
+  // Toggle sidebar headers
+  document.querySelectorAll('.sidebar-text').forEach(el => {
+    el.style.display = 'none';
+  });
+  document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => {
+    el.style.display = 'block';
+  });
 
-      // Toggle sidebar links
-      const linkIds = ['info', 'contact', 'survey'];
-      linkIds.forEach(id => {
-        const enLink = document.querySelector(`#link-${id}-en`);
-        const ukLink = document.querySelector(`#link-${id}-uk`);
+  // Toggle sidebar links
+  const linkIds = ['info', 'contact', 'survey'];
+  linkIds.forEach(id => {
+    const enLink = document.querySelector(`#link-${id}-en`);
+    const ukLink = document.querySelector(`#link-${id}-uk`);
 
-        if (enLink && ukLink) {
-          enLink.style.display = (lang === 'en') ? 'inline' : 'none';
-          ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
-        }
-      });
+    if (enLink && ukLink) {
+      enLink.style.display = (lang === 'en') ? 'inline' : 'none';
+      ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
+    }
+  });
+
+  // Toggle top banner links
+  document.querySelector('#top-banner a:not(#link-survey-banner-uk)').style.display = (lang === 'en') ? 'inline' : 'none';
+  document.querySelector('#link-survey-banner-uk').style.display = (lang === 'uk') ? 'inline' : 'none';
+}
     }
   </script>
 </head>
