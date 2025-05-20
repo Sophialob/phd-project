@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help & Contact Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      color: #333;
+    }
+    .contact-section {
+      margin-top: 1.5rem;
+    }
+    .contact-item {
+      margin-bottom: 1rem;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>Help & Contact Information</h1>
+
+  <div class="contact-section">
+    <div class="contact-item">
+      <span class="label">Name:</span> Sophia Lobanov-Rostovsky
+    </div>
+    <div class="contact-item">
+      <span class="label">Email:</span> <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk"<sophia.lobanov-rostovsky@lshtm.ac.uk</a>
+    </div
+  </div>
+
+</body>
+</html>
