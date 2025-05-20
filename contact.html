@@ -2,32 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact information" />
   <title>Help & Contact Information</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-    h1 {
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
       color: #333;
     }
-    .contact-section {
-      margin-top: 1.5rem;
+    header {
+      background-color: white;
+      color: #333;
+      padding: 20px 0;
+      text-align: center;
     }
-    .contact-item {
-      margin-bottom: 1rem;
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
     }
-    .label {
+    .logo {
+      max-height: 150px;
+      width: auto;
+      display: block;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
       font-weight: bold;
     }
+    p {
+      font-weight: normal;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .language-section {
+      display: none;
+    }
+    .language-section.active {
+      display: block;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+    .sidebar {
+      width: 200px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      overflow-y: auto;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .main {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    }
   </style>
-</head>
-<body>
+  <script>
+  function switchLanguage(lang) {
+    // Hide all language sections
+    document.querySelectorAll('.language-section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.querySelector(`#lang-${lang}`).classList.add('active');
 
-  </script>
+    // Toggle header texts
+    document.querySelectorAll('.header-text').forEach(el => {
+      el.style.display = 'none';
+    });
+    document.querySelector(`#header-${lang}`).style.display = 'inline';
+
+    // Toggle sidebar headers
+    document.querySelectorAll('.sidebar-text').forEach(el => {
+      el.style.display = 'none';
+    });
+    document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => {
+      el.style.display = 'block';
+    });
+
+    // Toggle sidebar links
+const linkIds = ['info', 'contact', 'survey'];
+
+    linkIds.forEach(id => {
+      const enLink = document.querySelector(`#link-${id}-en`);
+      const ukLink = document.querySelector(`#link-${id}-uk`);
+
+      if (enLink && ukLink) {
+        enLink.style.display = (lang === 'en') ? 'inline' : 'none';
+        ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
+      }
+    });
+  }
+</script>
 </head>
 <body>
   <header>
@@ -36,31 +139,50 @@
       <img src="assets/USC logo.png" alt="Logo 2" class="logo" />
     </div>
     <h1>
-      <span class="header-text" id="header-en">Help & Contact Information </span>
-      <span class="header-text" id="header-uk" style="display:none;">Довідка та Контактна інформація</span>
+      <span class="header-text" id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
+      <span class="header-text" id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
     </h1>
     <select onchange="switchLanguage(this.value)">
       <option value="en">English</option>
       <option value="uk">Ukrainian</option>
     </select>
   </header>
-  
-  <h1>Contact Information</h1>
 
-  <div class="contact-section">
-    <div class="contact-item">
-      <span class="label">Name:</span> Sophia Lobanov-Rostovsky
-    </div>
-    <div class="contact-item">
-      <span class="label">Email:</span> <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk"<sophia.lobanov-rostovsky@lshtm.ac.uk</a>
-    </div
-  </div>
+  <div class="container">
 
-   <div class="help-section">
-    <div class="help-item">
-      <span class="label">Name:</span> Referral list
+    <div id="contents" class="sidebar">
+  <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
+  <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
+ 
+<ul>
+  <li>
+    <a href="https://sophialob.github.io/phd-project/#contact" class="sidebar-text" id="link-info-en">Participant Information</a>
+    <a href="https://sophialob.github.io/phd-project/#contact" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
+  </li>
+
+  <li>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_blank" class="sidebar-text" id="link-survey-en">Click here to take the survey</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_blank" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+  </li>
+
+  <li>
+    <a href="contact.html" class="sidebar-text" id="link-contact-en"target="_blank">Help & Contact Information</a>
+    <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none;"target="_blank">Довідка та Контактна інформація</a>
+  </li>
+</ul>
+</div> 
+    
+    <main class="main">
+      <!-- English Content -->
+      <div id="lang-en" class="language-section active">
+      <h2 id="Contact">Contact Information</h2>
+    
+
     </div>
-  
-  
-</body>
-</html>
+
+    <!-- Ukrainian Content -->
+       <div id="lang-uk" class="language-section">
+  <h2 id="контакт">контактна інформація</h2>
+
+    </main>
+  </div>   
