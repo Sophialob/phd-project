@@ -96,38 +96,41 @@
     }
   </style>
   <script>
-    function switchLanguage(lang) {
-  // Hide all language sections
-  document.querySelectorAll('.language-section').forEach(section => {
-    section.classList.remove('active');
-  });
-  document.querySelector(`#lang-${lang}`).classList.add('active');
+  function switchLanguage(lang) {
+    // Hide all language sections
+    document.querySelectorAll('.language-section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.querySelector(`#lang-${lang}`).classList.add('active');
 
-  // Toggle header texts
-  document.querySelectorAll('.header-text').forEach(el => {
-    el.style.display = 'none';
-  });
-  document.querySelector(`#header-${lang}`).style.display = 'inline';
+    // Toggle header texts
+    document.querySelectorAll('.header-text').forEach(el => {
+      el.style.display = 'none';
+    });
+    document.querySelector(`#header-${lang}`).style.display = 'inline';
 
-  // Toggle sidebar headers
-  document.querySelectorAll('.sidebar-text').forEach(el => {
-    el.style.display = 'none';
-  });
-  document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => el.style.display = 'block');
+    // Toggle sidebar headers
+    document.querySelectorAll('.sidebar-text').forEach(el => {
+      el.style.display = 'none';
+    });
+    document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => {
+      el.style.display = 'block';
+    });
 
-  // Toggle sidebar links
-  const linkIds = ['intro', 'methods', 'results', 'contact', 'info']; // <-- 'info' added
+    // Toggle sidebar links
+    const linkIds = ['intro', 'methods', 'results', 'contact', 'info']; // <-- 'info' added
 
-linkIds.forEach(id => {
-  const enLink = document.querySelector(`#link-${id}-en`);
-  const ukLink = document.querySelector(`#link-${id}-uk`);
+    linkIds.forEach(id => {
+      const enLink = document.querySelector(`#link-${id}-en`);
+      const ukLink = document.querySelector(`#link-${id}-uk`);
 
-  if (enLink && ukLink) {
-    enLink.style.display = (lang === 'en') ? 'inline' : 'none';
-    ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
+      if (enLink && ukLink) {
+        enLink.style.display = (lang === 'en') ? 'inline' : 'none';
+        ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
+      }
+    });
   }
-});
-  </script>
+</script>
 </head>
 <body>
   <header>
