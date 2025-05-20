@@ -97,19 +97,32 @@
   </style>
   <script>
     function switchLanguage(lang) {
-      document.querySelectorAll('.language-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.querySelector(`#lang-${lang}`).classList.add('active');
+  // Hide all language sections
+  document.querySelectorAll('.language-section').forEach(section => {
+    section.classList.remove('active');
+  });
+  document.querySelector(`#lang-${lang}`).classList.add('active');
 
-      document.querySelectorAll('.header-text').forEach(el => {
-        el.style.display = 'none';
-      });
-      document.querySelector(`#header-${lang}`).style.display = 'inline';
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      switchLanguage('en');
-    });
+  // Toggle header texts
+  document.querySelectorAll('.header-text').forEach(el => {
+    el.style.display = 'none';
+  });
+  document.querySelector(`#header-${lang}`).style.display = 'inline';
+
+  // Toggle sidebar headers
+  document.querySelectorAll('.sidebar-text').forEach(el => {
+    el.style.display = 'none';
+  });
+  document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => el.style.display = 'block');
+
+  // Toggle sidebar links
+  const linkIds = ['intro', 'methods', 'results', 'contact'];
+  linkIds.forEach(id => {
+    document.querySelectorAll(`#link-${id}-en`).forEach(el => el.style.display = 'none');
+    document.querySelectorAll(`#link-${id}-uk`).forEach(el => el.style.display = 'none');
+    document.querySelectorAll(`#link-${id}-${lang}`).forEach(el => el.style.display = 'inline');
+  });
+}
   </script>
 </head>
 <body>
