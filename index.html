@@ -118,7 +118,7 @@
     });
 
     // Toggle sidebar links
-    const linkIds = ['intro', 'methods', 'results', 'contact', 'info']; // <-- 'info' added
+const linkIds = ['intro', 'methods', 'results', 'contact', 'info', 'survey'];
 
     linkIds.forEach(id => {
       const enLink = document.querySelector(`#link-${id}-en`);
@@ -154,19 +154,22 @@
   <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
   <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
  
-  <ul>
-    <li>
-      <a href="#info" class="sidebar-text" id="link-info-en">Participant Information</a>
-        <a href="#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
-    </li>
-     <li><a href="#survey" class="sidebar-text" id="link-results-en">Click here to take the survey</a>
-        <a href="#survey" class="sidebar-text" id="link-results-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
-    </li>
-    <li><a href="#contact" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
-        <a href="#contact" class="sidebar-text" id="link-contact-uk" style="display:none;">Довідка та Контактна інформація</a>
-    </li>
-  </ul>
-</div>
+<ul>
+  <li>
+    <a href="#info" class="sidebar-text" id="link-info-en">Participant Information</a>
+    <a href="#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
+  </li>
+
+  <li>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_blank" class="sidebar-text" id="link-survey-en">Click here to take the survey</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_blank" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+  </li>
+
+  <li>
+    <a href="#contact" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
+    <a href="#contact" class="sidebar-text" id="link-contact-uk" style="display:none;">Довідка та Контактна інформація</a>
+  </li>
+</ul>
 
     <main class="main">
       <!-- English Content -->
