@@ -1,160 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
-  <title>Participant Information</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
-      padding-top: 50px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
+    <title>Participant Information</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        padding-top: 50px;
+      }
 
-    header {
-      background-color: white;
-      color: #333;
-      padding: 20px 0;
-      text-align: center;
-    }
+      header {
+        background-color: white;
+        color: #333;
+        padding: 20px 0;
+        text-align: center;
+      }
 
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
 
-    .logo {
-      max-height: 180px;
-      width: auto;
-      display: block;
-    }
+      .logo {
+        max-height: 180px;
+        width: auto;
+        display: block;
+      }
 
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
 
-    h1, h2, h3 {
-      color: #2c3e50;
-      font-weight: bold;
-    }
+      h1, h2, h3 {
+        color: #2c3e50;
+        font-weight: bold;
+      }
 
-    p {
-      font-weight: normal;
-    }
+      p {
+        font-weight: normal;
+      }
 
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
+      a {
+        color: #2980b9;
+        text-decoration: none;
+      }
 
-    a:hover {
-      text-decoration: underline;
-    }
+      a:hover {
+        text-decoration: underline;
+      }
 
-    .language-section {
-      display: none;
-    }
+      .language-section {
+        display: none;
+      }
 
-    .language-section.active {
-      display: block;
-    }
+      .language-section.active {
+        display: block;
+      }
 
-    .container {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .sidebar {
-      width: 200px;
-      padding: 20px;
-      background-color: #f0f0f0;
-      height: 100vh;
-      position: sticky;
-      top: 0;
-      overflow-y: auto;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    .sidebar li {
-      margin-bottom: 10px;
-    }
-
-    .main {
-      flex-grow: 1;
-      padding: 20px;
-    }
-
-    @media (max-width: 768px) {
       .container {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
       }
+
       .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+        width: 200px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
       }
-    }
 
-    #top-banner {
-      background-color: #007BFF;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 18px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 9999;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+      .sidebar ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
 
-    #top-banner a {
-      color: white;
-      text-decoration: underline;
-    }
+      .sidebar li {
+        margin-bottom: 10px;
+      }
 
-    #top-banner a:hover {
-      color: #cce5ff;
-    }
+      .main {
+        flex-grow: 1;
+        padding: 20px;
+      }
 
-    select {
-      font-size: 14px;
-      padding: 8px 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-  </style>
-  <script>
-    function switchLanguage(lang) {
-      document.querySelectorAll('.language-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.querySelector(`#lang-${lang}`).classList.add('active');
-    }
-  </script>
-</head>
-<body>
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+      }
+
+      #top-banner {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #top-banner a {
+        color: white;
+        text-decoration: underline;
+      }
+
+      #top-banner a:hover {
+        color: #cce5ff;
+      }
+
+      select {
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function switchLanguage(lang) {
+        document.querySelectorAll('.language-section').forEach(section => {
+          section.classList.remove('active');
+        });
+        document.querySelector(`#lang-${lang}`).classList.add('active');
+
+        document.querySelectorAll('[id^="header-"]').forEach(el => el.style.display = 'none');
+        document.getElementById(`header-${lang}`).style.display = 'block';
+
+        document.querySelectorAll('[id^="sidebar-header-"]').forEach(el => el.style.display = 'none');
+        document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
+
+        document.querySelectorAll('[id^="link-info-"]').forEach(el => el.style.display = 'none');
+        document.getElementById(`link-info-${lang}`).style.display = 'inline';
+
+        document.querySelectorAll('[id^="link-survey-"]').forEach(el => el.style.display = 'none');
+        document.getElementById(`link-survey-${lang}`).style.display = 'inline';
+
+        document.querySelectorAll('[id^="link-contact-"]').forEach(el => el.style.display = 'none');
+        document.getElementById(`link-contact-${lang}`).style.display = 'inline';
+
+        document.querySelectorAll('[id^="link-survey-banner-"]').forEach(el => el.style.display = 'none');
+        document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
+      }
+    </script>
+  </head>
+  <body>
   <header>
     <div id="top-banner">
       <a href="#" id="link-survey-banner-en">Click here to go to the survey</a>
