@@ -136,7 +136,6 @@
       color: #cce5ff;
     }
 
-    /* NEW: Make language switch button larger and styled */
     select {
       font-size: 14px;
       padding: 8px 12px;
@@ -146,125 +145,105 @@
       cursor: pointer;
     }
   </style>
-
   <script>
     function switchLanguage(lang) {
       document.querySelectorAll('.language-section').forEach(section => {
         section.classList.remove('active');
       });
-      const langSection = document.querySelector(`#lang-${lang}`);
-      if (langSection) {
-        langSection.classList.add('active');
-      }
-
-      document.querySelectorAll('.header-text').forEach(el => {
-        el.style.display = 'none';
-      });
-      const header = document.querySelector(`#header-${lang}`);
-      if (header) header.style.display = 'inline';
-
-      document.querySelectorAll('.sidebar-text').forEach(el => {
-        el.style.display = 'none';
-      });
-      document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => {
-        el.style.display = 'block';
-      });
-
-      const linkIds = ['info', 'contact', 'survey'];
-      linkIds.forEach(id => {
-        const enLink = document.querySelector(`#link-${id}-en`);
-        const ukLink = document.querySelector(`#link-${id}-uk`);
-
-        if (enLink && ukLink) {
-          enLink.style.display = (lang === 'en') ? 'inline' : 'none';
-          ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
-        }
-      });
-
-      const bannerEn = document.getElementById('link-survey-banner-en');
-      const bannerUk = document.getElementById('link-survey-banner-uk');
-      if (bannerEn && bannerUk) {
-        bannerEn.style.display = (lang === 'en') ? 'inline' : 'none';
-        bannerUk.style.display = (lang === 'uk') ? 'inline' : 'none';
-      }
+      document.querySelector(`#lang-${lang}`).classList.add('active');
     }
   </script>
 </head>
 <body>
   <header>
     <div id="top-banner">
-      <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-en">Click here to go to the survey</a>
-      <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+      <a href="#" id="link-survey-banner-en">Click here to go to the survey</a>
+      <a href="#" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
     </div>
-
     <div class="logo-container">
       <img src="assets/LSHTM square.png" alt="Logo 1" class="logo" />
       <img src="assets/USC logo.png" alt="Logo 2" class="logo" />
     </div>
-
     <h1 class="header">
       <span class="header-text" id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
-      <span class="header-text" id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
+      <span class="header-text" id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок у Великій Британії</span>
     </h1>
-    
     <select onchange="switchLanguage(this.value)">
       <option value="en">English</option>
       <option value="uk">Ukrainian</option>
     </select>
   </header>
-</body>
-</html>
-
-
   <div class="container">
     <div id="contents" class="sidebar">
       <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
       <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
-
-    <ul>
-  <li>
-    <a href="index.html#info" class="sidebar-text" id="link-info-en">Participant Information</a>
-    <a href="index.html#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
-  </li>
-  <li>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-en">Click here to go to the survey</a>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
-  </li>
-  <li>
-    <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
-    <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none">Довідка та Контактна інформація</a>
-  </li>
-</ul>
-    </div> 
-    
-    
-  <main class="main">
-  <!-- English Content -->
-  <div id="lang-en" class="language-section active">
-    <h2 id="HelpContact">Help & Contact Information</h2>
-    <h3>Contact Us</h3>
-    <p>
-      If you have any questions about this study, or experience increasing levels of distress in the hours or days after completing the survey, please contact the main researcher responsible for this PhD project, Sophia Lobanov-Rostovsky (<a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">sophia.lobanov-rostovsky@lshtm.ac.uk</a>) or the PhD project supervisors, Dr. Joelle Mak (<a href="mailto:joelle.mak@lshtm.ac.uk">joelle.mak@lshtm.ac.uk</a>) or Prof. Loraine Bacchus (<a href="mailto:loraine.bacchus@lshtm.ac.uk">loraine.bacchus@lshtm.ac.uk</a>).
-    </p>
-
-    <h3>Help from mental health and psychosocial support services</h3>
-    <p>
-      If you feel that you would benefit from professional mental health and psychosocial support, the main researcher responsible for the PhD project, Sophia Lobanov-Rostovsky (<a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">sophia.lobanov-rostovsky@lshtm.ac.uk</a>), can help you to access appropriate services. If you prefer to contact the services yourself, please visit: 
-    </p>
+      <ul>
+        <li><a href="#info" class="sidebar-text" id="link-info-en">Participant Information</a></li>
+        <li><a href="#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a></li>
+        <li><a href="#" class="sidebar-text" id="link-survey-en">Click here to go to the survey</a></li>
+        <li><a href="#" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a></li>
+        <li><a href="#contact" class="sidebar-text" id="link-contact-en">Help & Contact Information</a></li>
+        <li><a href="#contact" class="sidebar-text" id="link-contact-uk" style="display:none;">Довідка та Контактна інформація</a></li>
+      </ul>
+    </div>
+    <main class="main">
+      <div id="lang-en" class="language-section active">
+        <h2>Help & Contact Information</h2>
+        <p>If you feel that you would benefit from professional mental health and psychosocial support, you can contact:</p>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; margin-top: 20px;">
+          <thead>
+            <tr style="background-color: #f0f0f0;">
+              <th>Service</th>
+              <th>Support Provided</th>
+              <th>Location / Time</th>
+              <th>Contact & Referral Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UA Mental Help</td>
+              <td>● Free psychological support via phone or chat for Ukrainians of any age.<br>● Session duration: 50 minutes (Google Meet)</td>
+              <td>Online</td>
+              <td>📞 0800 331 200<br>💬 Chat: daily 9:00–21:00</td>
+            </tr>
+            <tr>
+              <td>Teenergizer</td>
+              <td>● Free consultations for Ukrainians of any age.<br>● Session duration: 30 minutes.<br>● Wait time: 20 min to 2 hours</td>
+              <td>Online</td>
+              <td>Self-referral via chat</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="lang-uk" class="language-section">
+        <h2>Довідка та контактна інформація</h2>
+        <p>Якщо ви вважаєте, що вам потрібна професійна психологічна або психосоціальна підтримка, ви можете звернутися:</p>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; margin-top: 20px;">
+          <thead>
+            <tr style="background-color: #f0f0f0;">
+              <th>Сервіс</th>
+              <th>Допомога</th>
+              <th>Місце / Час</th>
+              <th>Контакт</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UA Mental Help</td>
+              <td>● Безкоштовна психологічна підтримка телефоном або в чаті для українців будь-якого віку.<br>● Тривалість консультації: 50 хв (Google Meet)</td>
+              <td>Онлайн</td>
+              <td>📞 0800 331 200<br>💬 Чат: щоденно 9:00–21:00</td>
+            </tr>
+            <tr>
+              <td>Teenergizer</td>
+              <td>● Безкоштовні онлайн-консультації для українців.<br>● Тривалість консультації: 30 хв.<br>● Очікування: 20 хв – 2 год з моменту звернення</td>
+              <td>Онлайн</td>
+              <td>Самостійне звернення через чат</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
   </div>
-
-  <!-- Ukrainian Content -->
-  <div id="lang-uk" class="language-section">
-    <h2 id="HelpContactUk">Довідка та контактна інформація</h2>
-    <h3>Зв'яжіться з нами</h3>
-    <p>
-      Якщо у вас є будь-які запитання або ви відчуваєте підвищений  рівень стресу протягом годин або днів після завершення опитування, будь ласка, надішліть електронного листа дослідниці, відповідальній за цей дисертаційний проєкт, Софії Лобановій-Ростовській (<a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">sophia.lobanov-rostovsky@lshtm.ac.uk</a>) або керівникам проєкту: докторці Джоель Мак (<a href="mailto:joelle.mak@lshtm.ac.uk">joelle.mak@lshtm.ac.uk</a>) або професорці Лорейн Бакхус (<a href="mailto:loraine.bacchus@lshtm.ac.uk">loraine.bacchus@lshtm.ac.uk</a>).
-    </p>
-
-    <h3>Допомога від служб психічного здоров'я та психосоціальної підтримки</h3>
-    <p>
-      Якщо ви вважаєте, що вам була б корисна професійна підтримка у сфері психічного здоров’я та психосоціальної підтримки, дослідниця Софія Лобанова-Ростовська (<a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">sophia.lobanov-rostovsky@lshtm.ac.uk</a>) може допомогти вам отримати доступ до відповідних послуг. Якщо ви бажаєте самостійно звернутися до служб, будь ласка, відвідайте наступні посилання:
-    </p>
-  </div>
-</main>
-  
+</body>
+</html>
