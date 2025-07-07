@@ -15,24 +15,25 @@
       color: #333;
     }
 
-   #top-banner {
-  background-color: #0056b3;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 18px;
-  font-weight: bold;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+    #top-banner {
+      background-color: #007bff; /* blue banner */
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
 
     #top-banner a {
       color: white;
       text-decoration: underline;
+      margin: 0 10px;
     }
 
     #top-banner a:hover {
@@ -142,10 +143,11 @@
     }
   </style>
 </head>
-    <div id="top-banner">
-      <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-en">Click here to go to the survey</a>
-      <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
-    </div>
+<body>
+  <div id="top-banner">
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-en">Click here to go to the survey</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+  </div>
 
   <header>
     <h1 class="header">
@@ -159,15 +161,15 @@
     </select>
   </header>
 
-    <div class="container">
+  <div class="container">
     <div id="contents" class="sidebar">
       <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
       <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
 
-            <ul>
+      <ul>
         <li>
-          <a href="index.html" class="sidebar-text" id="link-info-en">Participant Information</a>
-          <a href="index.html" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
+          <a href="#info" class="sidebar-text" id="link-info-en">Participant Information</a>
+          <a href="#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
         </li>
         <li>
           <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-en">Click here to go to the survey</a>
@@ -176,7 +178,6 @@
         <li>
           <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
           <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none">Довідка та Контактна інформація</a>
-        </li>
         </li>
       </ul>
     </div>
@@ -343,7 +344,7 @@
 <p>Якщо у вас є будь-які запитання або ви відчуваєте підвищений рівень стресу протягом годин або днів після завершення опитування, будь ласка, надішліть електронного листа дослідниці, відповідальній за цей дисертаційний проєкт, Софії Лобановій-Ростовській: <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">sophia.lobanov-rostovsky@lshtm.ac.uk</a> або керівникам проєкту: докторці Джоель Мак: <a href="mailto:joelle.mak@lshtm.ac.uk">joelle.mak@lshtm.ac.uk</a> або професорці Лорейн Бакхус: <a href="mailto:loraine.bacchus@lshtm.ac.uk">loraine.bacchus@lshtm.ac.uk</a>.</p>
     
 <h3>Допомога від служб психічного здоров'я та психосоціальної підтримки</h3>
-<p>Якщо ви вважаєте, що вам була б корисна професійна підтримка у сфері психічного здоров’я та психосоціальної підтримки, дослідниця Софія Лобанова-Ростовська (sophia.lobanov-rostovsky@lshtm.ac.uk) може допомогти вам отримати доступ до відповідних послуг. Якщо ви бажаєте самостійно звернутися до служб, будь ласка, відвідайте наступні посилання:</p>
+<p>Якщо ви вважаєте, що вам була б корисна професійна підтримка у сфері психічного здоров’я та психосоціальної підтримки, дослідниця Софія Лобанова-Ростовська <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">(sophia.lobanov-rostovsky@lshtm.ac.uk)</a> може допомогти вам отримати доступ до відповідних послуг. Якщо ви бажаєте самостійно звернутися до служб, будь ласка, відвідайте наступні посилання:</p>
   
     <table style="width:100%; border-collapse: collapse;" border="1">
       <thead>
@@ -504,54 +505,26 @@
 
   <script>
     function switchLanguage(lang) {
-      const languages = ['en', 'uk'];
-      languages.forEach(l => {
-        const header = document.getElementById(`header-${l}`);
-        if (header) header.style.display = 'none';
+      const isEnglish = lang === 'en';
 
-        const banner = document.getElementById(`link-survey-banner-${l}`);
-        if (banner) banner.style.display = 'none';
+      document.getElementById('header-en').style.display = isEnglish ? 'inline' : 'none';
+      document.getElementById('header-uk').style.display = isEnglish ? 'none' : 'inline';
 
-        const section = document.getElementById(`lang-${l}`);
-        if (section) section.classList.remove('active');
+      document.getElementById('sidebar-header-en').style.display = isEnglish ? 'block' : 'none';
+      document.getElementById('sidebar-header-uk').style.display = isEnglish ? 'block' : 'none';
 
-        const sidebarHeader = document.getElementById(`sidebar-header-${l}`);
-        if (sidebarHeader) sidebarHeader.style.display = 'none';
+      document.getElementById('link-info-en').style.display = isEnglish ? 'inline' : 'none';
+      document.getElementById('link-info-uk').style.display = isEnglish ? 'inline' : 'none';
 
-        const linkInfo = document.getElementById(`link-info-${l}`);
-        if (linkInfo) linkInfo.style.display = 'none';
+      document.getElementById('link-survey-en').style.display = isEnglish ? 'inline' : 'none';
+      document.getElementById('link-survey-uk').style.display = isEnglish ? 'inline' : 'none';
 
-        const linkContact = document.getElementById(`link-contact-${l}`);
-        if (linkContact) linkContact.style.display = 'none';
-      });
+      document.getElementById('link-contact-en').style.display = isEnglish ? 'inline' : 'none';
+      document.getElementById('link-contact-uk').style.display = isEnglish ? 'inline' : 'none';
 
-      const selectedHeader = document.getElementById(`header-${lang}`);
-      if (selectedHeader) selectedHeader.style.display = 'inline';
-
-      const selectedBanner = document.getElementById(`link-survey-banner-${lang}`);
-      if (selectedBanner) selectedBanner.style.display = 'inline';
-
-      const activeSection = document.getElementById(`lang-${lang}`);
-      if (activeSection) activeSection.classList.add('active');
-
-      const sidebarHeader = document.getElementById(`sidebar-header-${lang}`);
-      if (sidebarHeader) sidebarHeader.style.display = 'block';
-
-      const linkInfo = document.getElementById(`link-info-${lang}`);
-      if (linkInfo) linkInfo.style.display = 'inline';
-
-      const linkContact = document.getElementById(`link-contact-${lang}`);
-      if (linkContact) linkContact.style.display = 'inline';
+      document.getElementById('link-survey-banner-en').style.display = isEnglish ? 'inline' : 'none';
+      document.getElementById('link-survey-banner-uk').style.display = isEnglish ? 'inline' : 'none';
     }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const scrollY = window.scrollY;
-      if (window.location.hash) {
-        history.replaceState(null, null, window.location.pathname + window.location.search);
-      }
-      window.scrollTo(0, scrollY);
-      switchLanguage('en');
-    });
   </script>
 </body>
 </html>
