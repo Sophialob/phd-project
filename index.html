@@ -132,26 +132,23 @@
       cursor: pointer;
     }
 
-    /* Right-hand fixed logo bar */
+    /* Right-hand static logo bar (desktop) */
     .right-logo-bar {
       position: fixed;
-      top: 100px;
-      right: 0;
-      width: 100px;
+      top: 120px;           /* aligns visually below header */
+      right: 20px;          /* spacing from edge */
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 10px;
-      background-color: transparent;
+      gap: 30px;            /* space between logos */
       z-index: 1000;
     }
 
     .right-logo-bar img {
-      max-width: 80px;
+      width: 120px;         /* same as example site */
       height: auto;
     }
 
+    /* hide on small screens */
     @media (max-width: 768px) {
       .right-logo-bar {
         display: none;
@@ -219,7 +216,7 @@
     </select>
   </header>
 
-  <!-- Right-hand side logos -->
+  <!-- Right-hand static logo bar -->
   <div class="right-logo-bar">
     <img src="assets/LSHTM square.png" alt="LSHTM Logo">
     <img src="assets/USC logo.png" alt="USC Logo">
@@ -240,7 +237,7 @@
           <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
         </li>
         <li>
-          <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
+          <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information
           <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none">Довідка та Контактна інформація</a>
         </li>
       </ul>
