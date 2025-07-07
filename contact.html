@@ -29,121 +29,126 @@
       z-index: 9999;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+#top-banner a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 10px;
+}
 
-    #top-banner a {
-      color: white;
-      text-decoration: underline;
-      margin: 0 10px;
-    }
+#top-banner a:hover {
+  color: #cce5ff;
+}
 
-    #top-banner a:hover {
-      color: #cce5ff;
-    }
+header {
+  background-color: white;
+  color: #333;
+  padding: 80px 0 10px;
+  text-align: center;
+}
 
-    header {
-      background-color: white;
-      color: #333;
-      padding: 80px 0 10px;
-      text-align: center;
-    }
+h1, h2, h3 {
+  color: #2c3e50;
+  font-weight: bold;
+}
 
-    h1, h2, h3 {
-      color: #2c3e50;
-      font-weight: bold;
-    }
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
 
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 
-    .container {
-      display: flex;
-      flex-direction: row;
-    }
+.sidebar {
+  width: 220px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  height: 100vh;
+  position: sticky;
+  top: 70px;
+  overflow-y: auto;
+}
 
-    .sidebar {
-      width: 220px;
-      padding: 20px;
-      background-color: #f0f0f0;
-      height: 100vh;
-      position: sticky;
-      top: 70px;
-      overflow-y: auto;
-    }
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
 
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
+.sidebar li {
+  margin-bottom: 10px;
+}
 
-    .sidebar li {
-      margin-bottom: 10px;
-    }
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  max-width: 800px;
+}
 
-    .main {
-      flex-grow: 1;
-      padding: 20px;
-    }
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 20px 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 10px 20px 30px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
+.language-section {
+  display: none;
+}
 
-    .language-section {
-      display: none;
-    }
+.language-section.active {
+  display: block;
+}
 
-    .language-section.active {
-      display: block;
-    }
+select {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  cursor: pointer;
+}
 
-    select {
-      font-size: 14px;
-      padding: 8px 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-      cursor: pointer;
-    }
+.logo-sidebar {
+  width: 160px;
+  padding: 20px;
+  background-color: #fafafa;
+  height: 100vh;
+  position: sticky;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.05);
+}
 
-    .footer-logos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 40px auto;
-      gap: 20px;
-    }
+.footer-logo {
+  max-height: 100px;
+  width: auto;
+}
 
-    .footer-logo {
-      max-height: 100px;
-      width: auto;
-    }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-    }
-  </style>
-</head>
-<body>
+  .sidebar, .logo-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+}
   <div id="top-banner">
     <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-en">Click here to go to the survey</a>
     <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
@@ -516,12 +521,12 @@
     </div>
   </div>
 
- <!-- Footer Logos -->
-  <div class="footer-logos">
+  <div class="logo-sidebar">
     <img src="assets/LSHTM square.png" alt="LSHTM Logo" class="footer-logo" />
     <img src="assets/USC logo.png" alt="USC Logo" class="footer-logo" />
     <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Foundation Logo" class="footer-logo" />
   </div>
+</div>
 
   <script>
     function switchLanguage(lang) {
