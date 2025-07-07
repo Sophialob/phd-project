@@ -541,7 +541,7 @@
 </div> <!-- closes .container -->
 
 <script>
- function switchLanguage(lang) {
+  function switchLanguage(lang) {
     const isEnglish = lang === 'en';
     document.getElementById('header-en').style.display = isEnglish ? 'inline' : 'none';
     document.getElementById('header-uk').style.display = isEnglish ? 'none' : 'inline';
@@ -558,14 +558,16 @@
     document.getElementById('lang-en').classList.toggle('active', isEnglish);
     document.getElementById('lang-uk').classList.toggle('active', !isEnglish);
   }
+</script>
 
     // Top banner links
-    document.getElementById('link-survey-banner-en').style.display = isEnglish ? 'inline' : 'none';
-    document.getElementById('link-survey-banner-uk').style.display = isEnglish ? 'none' : 'inline';
+  document.getElementById('link-survey-banner-en').style.display = isEnglish ? 'inline' : 'none';
+  document.getElementById('link-survey-banner-uk').style.display = isEnglish ? 'none' : 'inline';
 
-    // Language content toggle
-    document.getElementById('lang-en').classList.toggle('active', isEnglish);
-    document.getElementById('lang-uk').classList.toggle('active', !isEnglish);
+  // Language content toggle
+  document.getElementById('lang-en').classList.toggle('active', isEnglish);
+  document.getElementById('lang-uk').classList.toggle('active', !isEnglish);
+}
   }
 </script>
 </body>
