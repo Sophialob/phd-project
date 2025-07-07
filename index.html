@@ -44,6 +44,7 @@
       color: #333;
       padding: 80px 0 10px;
       text-align: center;
+      margin-top: 60px; /* ✅ avoids overlap with top banner */
     }
 
     h1, h2, h3 {
@@ -142,17 +143,18 @@
     }
   </style>
 </head>
-
 <body>
+  <!-- Top Banner -->
   <div id="top-banner">
     <a href="#" id="link-survey-banner-en">Click here to go to the survey</a>
     <a href="#" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
   </div>
 
+  <!-- Header -->
   <header>
     <h1 class="header">
-      <span id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women...</span>
-      <span id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських...</span>
+      <span id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women in the UK</span>
+      <span id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат та молодих жінок у Великій Британії</span>
     </h1>
     <select onchange="switchLanguage(this.value)">
       <option value="en">English</option>
@@ -160,7 +162,9 @@
     </select>
   </header>
 
+  <!-- Content -->
   <div class="container">
+    <!-- Sidebar -->
     <div id="contents" class="sidebar">
       <h3 id="sidebar-header-en">Contents</h3>
       <h3 id="sidebar-header-uk" style="display:none;">Зміст</h3>
@@ -180,6 +184,7 @@
         </li>
       </ul>
     </div>
+
     <main class="main">
       <!-- English Content -->
       <div id="lang-en" class="language-section active">
@@ -293,35 +298,42 @@ If you decide to withdraw you will be asked what you wish to happen to the data 
 <p> Дякуємо, що знайшли час, щоб прочитати цю інформацію. Якщо ви вважаєте, що бажаєте взяти участь у дослідженні, перейдіть на цю сторінку, (it says click here to click here; better add the link to words цю сторінку)       де вас попросять підтвердити вашу відповідність вимогам і надати вашу інформовану згоду. Після того, як ви надасте свою згоду, ви зможете взяти участь в опитуванні. Якщо у вас виникли запитання щодо цього дослідження, будь ласка, зв’яжіться з головним дослідником, відповідальним за цей проєкт       (Софія Лобанова-Ростовська, sophia.lobanov-rostovsky@lshtm.ac.uk). </p>
     </main>
 
- <div class="footer-logos">
+<!-- Footer Logos -->
+  <div class="footer-logos">
     <img src="assets/LSHTM square.png" alt="LSHTM Logo" class="footer-logo" />
     <img src="assets/USC logo.png" alt="USC Logo" class="footer-logo" />
     <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Logo" class="footer-logo" />
   </div>
 
+  <!-- Language Switch Script -->
   <script>
     function switchLanguage(lang) {
-      const languages = ['en', 'uk'];
+      const otherLang = lang === 'en' ? 'uk' : 'en';
 
-      // Hide all elements for all languages
-      languages.forEach(l => {
-        document.getElementById(`header-${l}`)?.style.display = 'none';
-        document.getElementById(`link-survey-banner-${l}`)?.style.display = 'none';
-        document.getElementById(`lang-${l}`)?.classList.remove('active');
-        document.getElementById(`sidebar-header-${l}`)?.style.display = 'none';
-        document.getElementById(`link-info-${l}`)?.style.display = 'none';
-        document.getElementById(`link-contact-${l}`)?.style.display = 'none';
-        document.getElementById(`link-survey-${l}`)?.style.display = 'none';
-      });
+      // Header
+      document.getElementById(`header-${lang}`).style.display = 'inline';
+      document.getElementById(`header-${otherLang}`).style.display = 'none';
 
-      // Show elements for selected language
-      document.getElementById(`header-${lang}`)?.style.display = 'inline';
-      document.getElementById(`link-survey-banner-${lang}`)?.style.display = 'inline';
-      document.getElementById(`lang-${lang}`)?.classList.add('active');
-      document.getElementById(`sidebar-header-${lang}`)?.style.display = 'block';
-      document.getElementById(`link-info-${lang}`)?.style.display = 'inline';
-      document.getElementById(`link-contact-${lang}`)?.style.display = 'inline';
-      document.getElementById(`link-survey-${lang}`)?.style.display = 'inline';
+      // Top banner
+      document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
+      document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
+
+      // Main content
+      document.getElementById(`lang-${lang}`).classList.add('active');
+      document.getElementById(`lang-${otherLang}`).classList.remove('active');
+
+      // Sidebar
+      document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
+      document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
+
+      document.getElementById(`link-info-${lang}`).style.display = 'block';
+      document.getElementById(`link-info-${otherLang}`).style.display = 'none';
+
+      document.getElementById(`link-survey-${lang}`).style.display = 'block';
+      document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
+
+      document.getElementById(`link-contact-${lang}`).style.display = 'block';
+      document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
     }
 
     window.addEventListener('DOMContentLoaded', () => {
