@@ -61,6 +61,8 @@
     .container {
       display: flex;
       flex-direction: row;
+      max-width: 1100px; /* Added to align content nicely */
+      margin: 0 auto;    /* Center container */
     }
 
     .sidebar {
@@ -85,7 +87,8 @@
 
     .main {
       flex-grow: 1;
-      padding: 20px;
+      padding: 10px 15px; /* Reduced padding for content closer to sidebar */
+      margin-right: 160px; /* Keep space for right logos */
     }
 
     @media (max-width: 768px) {
@@ -96,6 +99,13 @@
         width: 100%;
         height: auto;
         position: relative;
+      }
+      .right-logo-bar {
+        display: none;
+      }
+      .main {
+        margin-right: 0; /* Remove right margin on small screens */
+        padding: 10px 20px;
       }
     }
 
@@ -135,25 +145,17 @@
     /* Right-hand static logo bar (desktop) */
     .right-logo-bar {
       position: fixed;
-      top: 200px;           /* shifted down to avoid covering title */
-      right: 20px;
+      top: 120px;           /* aligns visually below header */
+      right: 20px;          /* spacing from edge */
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 30px;            /* space between logos */
       z-index: 1000;
     }
 
     .right-logo-bar img {
-      width: 120px;
+      width: 120px;         /* same as example site */
       height: auto;
-      display: block;
-    }
-
-    /* hide on small screens */
-    @media (max-width: 768px) {
-      .right-logo-bar {
-        display: none;
-      }
     }
   </style>
 
@@ -219,9 +221,9 @@
 
   <!-- Right-hand static logo bar -->
   <div class="right-logo-bar">
-    <img src="assets/LSHTM square.png" alt="LSHTM Logo" />
-    <img src="assets/USC logo.png" alt="USC Logo" />
-    <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Logo" />
+    <img src="assets/LSHTM square.png" alt="LSHTM Logo">
+    <img src="assets/USC logo.png" alt="USC Logo">
+    <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Logo">
   </div>
 
   <div class="container">
@@ -240,7 +242,7 @@
         </li>
         <li>
           <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
-          <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none;">Довідка та Контактна інформація</a>
+          <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none">Довідка та Контактна інформація</a>
         </li>
       </ul>
     </div>
