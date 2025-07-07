@@ -16,7 +16,7 @@
     }
 
     #top-banner {
-      background-color: #007bff; /* blue banner */
+      background-color: #007bff;
       color: white;
       text-align: center;
       padding: 10px 0;
@@ -145,16 +145,15 @@
 </head>
 <body>
   <div id="top-banner">
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-en">Click here to go to the survey</a>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-en">Click here to go to the survey</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
   </div>
 
   <header>
     <h1 class="header">
-      <span class="header-text" id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
-      <span class="header-text" id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
+      <span id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
+      <span id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
     </h1>
-
     <select onchange="switchLanguage(this.value)">
       <option value="en">English</option>
       <option value="uk">Ukrainian</option>
@@ -163,31 +162,30 @@
 
   <div class="container">
     <div id="contents" class="sidebar">
-      <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
-      <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
-
+      <h3 id="sidebar-header-en">Contents</h3>
+      <h3 id="sidebar-header-uk" style="display:none;">Зміст</h3>
       <ul>
         <li>
-          <a href="#info" class="sidebar-text" id="link-info-en">Participant Information</a>
-          <a href="#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
+          <a href="#info" id="link-info-en">Participant Information</a>
+          <a href="#info" id="link-info-uk" style="display:none;">Інформація для учасника</a>
         </li>
         <li>
-          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-en">Click here to go to the survey</a>
-          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+          <a href="#" id="link-survey-en">Click here to go to the survey</a>
+          <a href="#" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
         </li>
         <li>
-          <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
-          <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none">Довідка та Контактна інформація</a>
+          <a href="contact.html" id="link-contact-en">Help & Contact Information</a>
+          <a href="contact.html" id="link-contact-uk" style="display:none;">Довідка та Контактна інформація</a>
         </li>
       </ul>
-    <div class="main">
-  <main>
-    <section id="info">
-  <!-- English Content -->
-   <div id="lang-en" class="language-section active">
-        <h2>Help & Contact Information</h2>
+    </div>
 
-<h3>Contact Us</h3>
+    <div class="main">
+      <main>
+        <section id="info">
+          <div id="lang-en" class="language-section active">
+            <h2>Help & Contact Information</h2>
+            <h3>Contact Us</h3>
 <p> If you have any questions about this study, or experience increasing levels of distress in the hours or days after completing the survey, please contact the main researcher responsible for this PhD project, Sophia Lobanov-Rostovsky:  <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">sophia.lobanov-rostovsky@lshtm.ac.uk</a> 
   or the PhD project supervisors, Dr. Joelle Mak: <a href="mailto:joelle.mak@lshtm.ac.uk">joelle.mak@lshtm.ac.uk</a> 
   or Prof. Loraine Bacchus:  <a href="mailto:loraine.bacchus@lshtm.ac.uk">loraine.bacchus@lshtm.ac.uk</a>.</p>
@@ -340,8 +338,7 @@
   <!-- Ukrainian Content -->
 <div id="lang-uk" class="language-section" style="display: none;">
   <h2 id="info">Допомога та Контактна інформація</h2>
-
-    <h3>Зв'яжіться з нами</h3>
+  <h3>Зв'яжіться з нами</h3>
 <p>Якщо у вас є будь-які запитання або ви відчуваєте підвищений рівень стресу протягом годин або днів після завершення опитування, будь ласка, надішліть електронного листа дослідниці, відповідальній за цей дисертаційний проєкт, Софії Лобановій-Ростовській: <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">sophia.lobanov-rostovsky@lshtm.ac.uk</a> або керівникам проєкту: докторці Джоель Мак: <a href="mailto:joelle.mak@lshtm.ac.uk">joelle.mak@lshtm.ac.uk</a> або професорці Лорейн Бакхус: <a href="mailto:loraine.bacchus@lshtm.ac.uk">loraine.bacchus@lshtm.ac.uk</a>.</p>
     
 <h3>Допомога від служб психічного здоров'я та психосоціальної підтримки</h3>
