@@ -552,26 +552,23 @@
 </div> <!-- closes .container -->
 
 <script>
-  function switchLanguage(lang) {
+ function switchLanguage(lang) {
     const isEnglish = lang === 'en';
-
-    // Headers
     document.getElementById('header-en').style.display = isEnglish ? 'inline' : 'none';
     document.getElementById('header-uk').style.display = isEnglish ? 'none' : 'inline';
-
-    // Sidebar headers
     document.getElementById('sidebar-header-en').style.display = isEnglish ? 'block' : 'none';
     document.getElementById('sidebar-header-uk').style.display = isEnglish ? 'none' : 'block';
-
-    // Sidebar links
     document.getElementById('link-info-en').style.display = isEnglish ? 'inline' : 'none';
     document.getElementById('link-info-uk').style.display = isEnglish ? 'none' : 'inline';
-
     document.getElementById('link-survey-en').style.display = isEnglish ? 'inline' : 'none';
     document.getElementById('link-survey-uk').style.display = isEnglish ? 'none' : 'inline';
-
     document.getElementById('link-contact-en').style.display = isEnglish ? 'inline' : 'none';
     document.getElementById('link-contact-uk').style.display = isEnglish ? 'none' : 'inline';
+    document.getElementById('link-survey-banner-en').style.display = isEnglish ? 'inline' : 'none';
+    document.getElementById('link-survey-banner-uk').style.display = isEnglish ? 'none' : 'inline';
+    document.getElementById('lang-en').classList.toggle('active', isEnglish);
+    document.getElementById('lang-uk').classList.toggle('active', !isEnglish);
+  }
 
     // Top banner links
     document.getElementById('link-survey-banner-en').style.display = isEnglish ? 'inline' : 'none';
