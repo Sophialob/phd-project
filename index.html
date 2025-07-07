@@ -3,74 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="PhD research survey: Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK" />
   <title>Participant Information</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+    /* Reset & basics */
+    body, html {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
       color: #333;
-      padding-top: 50px;
+      height: 100%;
     }
 
-    header {
-      background-color: white;
-      color: #333;
-      padding: 20px 0;
+    /* Fixed top banner */
+    #top-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #007bff;
+      color: white;
       text-align: center;
-    }
-
-    main {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    h1, h2, h3 {
-      color: #2c3e50;
+      padding: 10px 0;
       font-weight: bold;
+      z-index: 10000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-    p {
-      font-weight: normal;
-    }
-
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-
-    a:hover {
+    #top-banner a {
+      color: white;
       text-decoration: underline;
     }
-
-    .language-section {
-      display: none;
+    #top-banner a:hover {
+      color: #cce5ff;
     }
 
-    .language-section.active {
-      display: block;
-    }
-
+    /* Container below fixed banner */
     .container {
       display: flex;
       max-width: 980px;
-      margin: 0 auto;
+      margin: 70px auto 40px; /* 70px top margin to clear fixed banner */
+      min-height: calc(100vh - 110px); /* viewport height minus banner and margin */
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
+    /* Sidebar styles */
     .sidebar {
-      width: 140px; /* same as example */
-      padding: 20px 10px 20px 20px;
-      background-color: #f0f0f0;
-      height: 100vh;
-      position: sticky;
-      top: 50px; /* below fixed banner */
-      overflow-y: auto;
+      width: 140px;
+      background: #f0f0f0;
+      padding: 20px 15px 20px 20px;
       box-sizing: border-box;
       font-size: 14px;
+      position: sticky;
+      top: 70px; /* stick below banner */
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 1em;
     }
 
     .sidebar ul {
@@ -80,85 +75,28 @@
     }
 
     .sidebar li {
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
-    .main {
-      flex-grow: 1; /* fill remaining space */
-      padding: 20px 40px 40px 40px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      font-size: 16px;
-      max-width: 820px; /* slightly less than total width - sidebar */
+    .sidebar a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
     }
 
-    @media (max-width: 1024px) {
-      .container {
-        max-width: 100%;
-        padding: 0 10px;
-      }
-      .sidebar {
-        width: 130px;
-      }
-      .main {
-        max-width: none;
-        padding: 15px 20px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-      .main {
-        width: 100%;
-        padding: 15px 20px;
-      }
-      .right-logo-bar {
-        display: none;
-      }
-    }
-
-    #top-banner {
-      background-color: #007BFF;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 18px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 9999;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    #top-banner a {
-      color: white;
+    .sidebar a:hover {
       text-decoration: underline;
     }
 
-    #top-banner a:hover {
-      color: #cce5ff;
+    /* Main content fills remaining space */
+    .main {
+      flex-grow: 1;
+      padding: 30px 40px;
+      font-size: 16px;
+      overflow-y: auto;
     }
 
-    select {
-      font-size: 14px;
-      padding: 8px 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
-    /* Right-hand static logo bar (desktop) */
+    /* Right logos bar */
     .right-logo-bar {
       position: fixed;
       top: 50%;
@@ -176,101 +114,46 @@
       display: block;
     }
 
+    /* Responsive: stack on small screens */
     @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        margin: 100px 10px 20px;
+        max-width: 100%;
+      }
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: auto;
+        padding: 10px 15px;
+      }
+      .main {
+        padding: 15px 20px;
+      }
       .right-logo-bar {
         display: none;
       }
     }
   </style>
-
-  <script>
-    function switchLanguage(lang) {
-      document.querySelectorAll('.language-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      const langSection = document.querySelector(`#lang-${lang}`);
-      if (langSection) {
-        langSection.classList.add('active');
-      }
-
-      document.querySelectorAll('.header-text').forEach(el => {
-        el.style.display = 'none';
-      });
-      const header = document.querySelector(`#header-${lang}`);
-      if (header) header.style.display = 'inline';
-
-      document.querySelectorAll('.sidebar-text').forEach(el => {
-        el.style.display = 'none';
-      });
-      document.querySelectorAll(`#sidebar-header-${lang}`).forEach(el => {
-        el.style.display = 'block';
-      });
-
-      const linkIds = ['info', 'contact', 'survey'];
-      linkIds.forEach(id => {
-        const enLink = document.querySelector(`#link-${id}-en`);
-        const ukLink = document.querySelector(`#link-${id}-uk`);
-        if (enLink && ukLink) {
-          enLink.style.display = (lang === 'en') ? 'inline' : 'none';
-          ukLink.style.display = (lang === 'uk') ? 'inline' : 'none';
-        }
-      });
-
-      const bannerEn = document.getElementById('link-survey-banner-en');
-      const bannerUk = document.getElementById('link-survey-banner-uk');
-      if (bannerEn && bannerUk) {
-        bannerEn.style.display = (lang === 'en') ? 'inline' : 'none';
-        bannerUk.style.display = (lang === 'uk') ? 'inline' : 'none';
-      }
-    }
-  </script>
 </head>
 <body>
-  <header>
-    <div id="top-banner">
-      <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-en">Click here to go to the survey</a>
-      <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
-    </div>
 
-    <h1 class="header">
-      <span class="header-text" id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
-      <span class="header-text" id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
-    </h1>
-
-    <select onchange="switchLanguage(this.value)">
-      <option value="en">English</option>
-      <option value="uk">Ukrainian</option>
-    </select>
-  </header>
-
-  <!-- Right-hand static logo bar -->
-  <div class="right-logo-bar">
-    <img src="assets/LSHTM square.png" alt="LSHTM Logo" />
-    <img src="assets/USC logo.png" alt="USC Logo" />
-    <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Logo" />
+  <div id="top-banner">
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" target="_self">Click here to go to the survey</a>
   </div>
 
   <div class="container">
-    <nav id="contents" class="sidebar">
-      <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
-      <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
 
+    <nav class="sidebar" id="contents">
+      <h3>Contents</h3>
       <ul>
-        <li>
-          <a href="#info" class="sidebar-text" id="link-info-en">Participant Information</a>
-          <a href="#info" class="sidebar-text" id="link-info-uk" style="display:none;">Інформація для учасника</a>
-        </li>
-        <li>
-          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-en">Click here to go to the survey</a>
-          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" class="sidebar-text" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
-        </li>
-        <li>
-          <a href="contact.html" class="sidebar-text" id="link-contact-en">Help & Contact Information</a>
-          <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none">Довідка та Контактна інформація</a>
-        </li>
+        <li><a href="#info">Participant Information</a></li>
+        <li><a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6">Go to survey</a></li>
+        <li><a href="contact.html">Help & Contact Info</a></li>
       </ul>
     </nav>
-     </div>
+
     <main class="main">
       <!-- English Content -->
       <div id="lang-en" class="language-section active">
