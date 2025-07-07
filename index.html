@@ -307,7 +307,7 @@ If you decide to withdraw you will be asked what you wish to happen to the data 
     <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Logo" class="footer-logo" />
   </div>
 
-  <!-- Language Switch Script -->
+  <!-- Script -->
   <script>
     function switchLanguage(lang) {
       const otherLang = lang === 'en' ? 'uk' : 'en';
@@ -316,7 +316,7 @@ If you decide to withdraw you will be asked what you wish to happen to the data 
       document.getElementById(`header-${lang}`).style.display = 'inline';
       document.getElementById(`header-${otherLang}`).style.display = 'none';
 
-      // Top banner
+      // Banner
       document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
       document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
 
@@ -336,6 +336,13 @@ If you decide to withdraw you will be asked what you wish to happen to the data 
 
       document.getElementById(`link-contact-${lang}`).style.display = 'block';
       document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
+    }
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+      }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
