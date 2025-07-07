@@ -57,19 +57,20 @@
 
     .container {
       display: flex;
-      flex-direction: row;
       max-width: 980px;
       margin: 0 auto;
     }
 
     .sidebar {
-      width: 180px;
-      padding: 20px;
+      width: 140px; /* same as example */
+      padding: 20px 10px 20px 20px;
       background-color: #f0f0f0;
       height: 100vh;
       position: sticky;
-      top: 0;
+      top: 50px; /* below fixed banner */
       overflow-y: auto;
+      box-sizing: border-box;
+      font-size: 14px;
     }
 
     .sidebar ul {
@@ -79,15 +80,17 @@
     }
 
     .sidebar li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .main {
-      width: 780px;
-      padding: 20px 30px;
+      flex-grow: 1; /* fill remaining space */
+      padding: 20px 40px 40px 40px;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      max-width: 820px; /* slightly less than total width - sidebar */
     }
 
     @media (max-width: 1024px) {
@@ -96,10 +99,10 @@
         padding: 0 10px;
       }
       .sidebar {
-        width: 160px;
+        width: 130px;
       }
       .main {
-        width: calc(100% - 160px);
+        max-width: none;
         padding: 15px 20px;
       }
     }
@@ -158,8 +161,9 @@
     /* Right-hand static logo bar (desktop) */
     .right-logo-bar {
       position: fixed;
-      top: 120px;
+      top: 50%;
       right: 20px;
+      transform: translateY(-50%);
       display: flex;
       flex-direction: column;
       gap: 30px;
@@ -169,6 +173,7 @@
     .right-logo-bar img {
       width: 120px;
       height: auto;
+      display: block;
     }
 
     @media (max-width: 768px) {
@@ -246,7 +251,7 @@
   </div>
 
   <div class="container">
-    <div id="contents" class="sidebar">
+    <nav id="contents" class="sidebar">
       <h3 id="sidebar-header-en" class="sidebar-text">Contents</h3>
       <h3 id="sidebar-header-uk" class="sidebar-text" style="display:none;">Зміст</h3>
 
@@ -264,7 +269,8 @@
           <a href="contact.html" class="sidebar-text" id="link-contact-uk" style="display:none">Довідка та Контактна інформація</a>
         </li>
       </ul>
-    </div>
+    </nav>
+     </div>
     <main class="main">
       <!-- English Content -->
       <div id="lang-en" class="language-section active">
