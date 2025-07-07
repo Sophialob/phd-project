@@ -44,7 +44,7 @@
       color: #333;
       padding: 80px 0 10px;
       text-align: center;
-      margin-top: 60px; /* ✅ avoids overlap with top banner */
+      margin-top: 60px;
     }
 
     h1, h2, h3 {
@@ -147,7 +147,7 @@
   <!-- Top Banner -->
   <div id="top-banner">
     <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-en">Click here to go to the survey</a>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6"</a> id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
   </div>
 
   <!-- Header -->
@@ -169,21 +169,22 @@
       <h3 id="sidebar-header-en">Contents</h3>
       <h3 id="sidebar-header-uk" style="display:none;">Зміст</h3>
 
-     <ul>
-  <li>
-    <a href="#info" id="link-info-en">Participant Information</a>
-    <a href="#info" id="link-info-uk" style="display:none;">Інформація для учасника</a>
-  </li>
-  <li>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-en">Click here to go to the survey</a>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
-  </li>
-  <li>
-    <a href="contact.html" id="link-contact-en">Help & Contact Information</a>
-    <a href="contact.html" id="link-contact-uk" style="display:none;">Довідка та Контактна інформація</a>
-  </li>
-</ul>
+      <ul>
+        <li>
+          <a href="javascript:void(0);" id="link-info-en" onclick="scrollToSection('lang-en')">Participant Information</a>
+          <a href="javascript:void(0);" id="link-info-uk" onclick="scrollToSection('lang-uk')" style="display:none;">Інформація для учасника</a>
+        </li>
+        <li>
+          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-en">Click here to go to the survey</a>
+          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+        </li>
+        <li>
+          <a href="contact.html" id="link-contact-en">Help & Contact Information</a>
+          <a href="contact.html" id="link-contact-uk" style="display:none;">Довідка та Контактна інформація</a>
+        </li>
+      </ul>
     </div>
+
 
     <main class="main">
       <!-- English Content -->
