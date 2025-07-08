@@ -1,235 +1,263 @@
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
+  <title>Help/Contact Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
 
-  #top-banner {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 18px;
-    font-weight: bold;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
+    #top-banner {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
 
-  #top-banner a {
-    color: white;
-    text-decoration: underline;
-  }
+    #top-banner a {
+      color: white;
+      text-decoration: underline;
+    }
 
-  #top-banner a:hover {
-    color: #cce5ff;
-  }
+    #top-banner a:hover {
+      color: #cce5ff;
+    }
 
-  header {
-    background-color: white;
-    color: #333;
-    padding: 80px 0 10px;
-    text-align: center;
-    margin-top: 60px;
-  }
+    header {
+      background-color: white;
+      color: #333;
+      padding: 80px 0 10px;
+      text-align: center;
+      margin-top: 60px;
+    }
 
-  h1, h2, h3 {
-    color: #2c3e50;
-    font-weight: bold;
-  }
+    h1, h2, h3 {
+      color: #2c3e50;
+      font-weight: bold;
+    }
 
-  a {
-    color: #2980b9;
-    text-decoration: none;
-  }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .sidebar {
-    width: 220px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    height: 100vh;
-    position: sticky;
-    top: 70px;
-    overflow-y: auto;
-  }
-
-  .sidebar ul {
-    list-style: disc inside;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  .sidebar li {
-    margin-bottom: 10px;
-    list-style-type: disc;
-  }
-
-  .main {
-    flex-grow: 1;
-    padding: 20px;
-  }
-
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px 20px 30px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .language-section {
-    display: none;
-  }
-
-  .language-section.active {
-    display: block;
-  }
-
-  select {
-    font-size: 14px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-
-  .footer-logos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px auto;
-    gap: 20px;
-  }
-
-  .footer-logo {
-    max-height: 100px;
-    width: auto;
-  }
-
-  @media (max-width: 768px) {
     .container {
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
     }
 
     .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
+      width: 220px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      height: 100vh;
+      position: sticky;
+      top: 70px;
+      overflow-y: auto;
     }
-  }
 
-  .table-container {
-    overflow-x: auto;
-    margin: 20px 0;
-  }
+    .sidebar ul {
+      list-style: disc inside;
+      padding-left: 0;
+      margin: 0;
+    }
 
-  .responsive-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px;
-  }
+    .sidebar li {
+      margin-bottom: 10px;
+      list-style-type: disc;
+    }
 
-  .responsive-table th,
-  .responsive-table td {
-    padding: 10px;
-    text-align: left;
-  }
+    .main {
+      flex-grow: 1;
+      padding: 20px;
+    }
 
-  .responsive-table th {
-    background-color: #e0e0e0;
-  }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px 20px 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-  @media (max-width: 600px) {
-    .responsive-table th,
-    .responsive-table td {
-      padding: 8px;
+    .language-section {
+      display: none;
+    }
+
+    .language-section.active {
+      display: block;
+    }
+
+    select {
       font-size: 14px;
-      word-break: break-word;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+      cursor: pointer;
     }
-  }
-</style>
 
+    .footer-logos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px auto;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      max-height: 100px;
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="top-banner">
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-en">Click here to go to the survey</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+  </div>
+
+  <header>
+    <h1 class="header">
+      <span id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
+      <span id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
+    </h1>
+    <select onchange="switchLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="uk">Ukrainian</option>
+    </select>
+  </header>
+
+  <div class="container">
+    <div id="contents" class="sidebar">
+      <h3 id="sidebar-header-en">Contents</h3>
+      <h3 id="sidebar-header-uk" style="display:none;">Зміст</h3>
+      <ul>
+  <li id="link-info-en">
+    <a href="index.html">Participant Information</a>
+  </li>
+  <li id="link-info-uk" style="display:none;">
+    <a href="index.html">Інформація для учасниць</a>
+  </li>
+
+  <li id="link-survey-en">
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6">Click here to go to the survey</a>
+  </li>
+  <li id="link-survey-uk" style="display:none;">
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6">Натисніть тут, щоб пройти опитування</a>
+  </li>
+
+  <li id="link-contact-en">
+    <a href="contact.html">Help/Contact Information</a>
+  </li>
+  <li id="link-contact-uk" style="display:none;">
+    <a href="contact.html">Довідка/Контактна інформація</a>
+  </li>
+</ul>
+    </div>
+
+    <div class="main">
+      <main>
+        <section id="info">
+         <div id="lang-en" class="language-section active">
+            <h2 style="margin-top: 40px;">Help/Contact Information</h2>
+
+<h3>Contact Us</h3>
+<p> If you have any questions about this study, or experience increasing levels of distress in the hours or days after completing the survey, please contact the main researcher responsible for this PhD project, Sophia Lobanov-Rostovsky <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">(sophia.lobanov-rostovsky@lshtm.ac.uk)</a> or the PhD project supervisors, Dr. Joelle Mak <a href="mailto:joelle.mak@lshtm.ac.uk">(joelle.mak@lshtm.ac.uk)</a> or Prof. Loraine Bacchus <a href="mailto:loraine.bacchus@lshtm.ac.uk">(loraine.bacchus@lshtm.ac.uk)</a>.</p>
+           
 <h3> Emergency/Urgent Services </h3>
 
-<div class="table-container">
-  <table class="responsive-table" border="1">
-    <thead>
-      <tr>
-        <th>Service</th>
-        <th>Support provided</th>
-        <th>Contact Information</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Emergency Services</td>
-        <td>24/7 ambulance, crisis mental health support, police, fire brigade</td>
-        <td>Call 999 for free</td>
-      </tr>
-      <tr>
-        <td>NHS</td>
-        <td>24/7 for non-life-threatening emergencies but need medical help or advice fast or when you are not sure what to do</td>
-        <td>Call 111 for free</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/">Samaritans</a></td>
-        <td>24/7 services offering confidential support from trained volunteers</td>
-        <td>Call 116 123 for free. Email: <a href="mailto:jo@samaritans.org">jo@samaritans.org</a></td>
-      </tr>
-      <tr>
-        <td><a href="https://www.childline.org.uk">Childline</a></td>
-        <td>24/7 counsellors will help children and young people under 19</td>
-        <td>Call 0800 1111 for free (won’t appear on phone bill), or use <a href="https://www.childline.org.uk/get-support/1-2-1-counsellor-chat/">chat</a></td>
-      </tr>
-      <tr>
-        <td><a href="https://howareu.com">"How are you?"</a></td>
-        <td>The crisis helpline provides support in the most difficult moments for Ukrainians in the UK</td>
-        <td>Call +44 808 164 2432 (free from UK local numbers)</td>
-      </tr>
-      <tr>
-        <td><a href="https://giveusashout.org">Shout</a></td>
-        <td>24/7 urgent mental health support over text</td>
-        <td>Text "SHOUT" to 85258 or “YM” if you’re under 19</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.nationaldahelpline.org.uk">National Domestic Abuse Helpline</a></td>
-        <td>24/7 helpline if experiencing violence. English (call & chat); other languages available via interpretation services (call)</td>
-        <td>Call 0808 2000 247 for free or use <a href="https://www.nationaldahelpline.org.uk">chat</a> available Mon–Fri, 10AM–10PM</td>
-      </tr>
-      <tr>
-        <td><a href="https://thestreetlink.org.uk">Streetlink</a></td>
-        <td>24/7 help if you or someone you know is at risk of homelessness or experiencing homelessness</td>
-        <td>Call 0300 500 0914 for free</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table style="width:100%; border-collapse: collapse;" border="1">
+  <thead>
+    <tr>
+      <th style="padding: 10px; background-color: #e0e0e0;">Service</th>
+      <th style="padding: 10px; background-color: #e0e0e0;">Support provided</th>
+      <th style="padding: 10px; background-color: #e0e0e0;">Contact Information</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px;">Emergency Services</td>
+      <td style="padding: 10px;">24/7 ambulance, crisis mental health support, police, fire brigade</td>
+      <td style="padding: 10px;">Call 999 for free</td>
+    </tr> 
+    <tr>
+      <td style="padding: 10px;">NHS</td>
+      <td style="padding: 10px;">24/7 for non-life-threatening emergencies but need medical help or advice fast or when you are not sure what to do</td>
+      <td style="padding: 10px;">Call 111 for free</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;"><a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/">Samaritans</a></td>
+      <td style="padding: 10px;">24/7 services offering confidential support from trained volunteers</td>
+      <td style="padding: 10px;">Call 116 123 for free. Email: <a href="mailto:jo@samaritans.org">jo@samaritans.org</a> for a reply within 24 hours</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;"><a href="https://www.childline.org.uk">Childline</a></td>
+      <td style="padding: 10px;">24/7 counsellors will help children and young people under 19</td>
+      <td style="padding: 10px;">Call 0800 1111 for free (won’t appear on phone bill), or use <a href="https://www.childline.org.uk/get-support/1-2-1-counsellor-chat/">chat</a></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;"><a href="https://howareu.com">"How are you?"</a></td>
+      <td style="padding: 10px;">The crisis helpline provides support in the most difficult moments for Ukrainians in the UK</td>
+      <td style="padding: 10px;">Call +44 808 164 2432 (free from UK local numbers)</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;"><a href="https://giveusashout.org">Shout</a></td>
+      <td style="padding: 10px;">24/7 urgent mental health support over text</td>
+      <td style="padding: 10px;">Text "SHOUT" to 85258 or “YM” if you’re under 19</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;"><a href="https://www.nationaldahelpline.org.uk">National Domestic Abuse Helpline</a></td>
+      <td style="padding: 10px;">24/7 helpline if experiencing violence. English (call & chat); other languages available via interpretation services (call)</td>
+      <td style="padding: 10px;">Call 0808 2000 247 for free or use <a href="https://www.nationaldahelpline.org.uk">chat</a> available Mon–Fri, 10AM–10PM</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;"><a href="https://thestreetlink.org.uk">Streetlink</a></td>
+      <td style="padding: 10px;">24/7 help if you or someone you know is at risk of homelessness or experiencing homelessness</td>
+      <td style="padding: 10px;">Call 0300 500 0914 for free</td>
+    </tr>
+  </tbody>
+</table>
        
     <h3>Help from mental health and psychosocial support services</h3>
                 
   </p> If you feel that you would benefit from professional mental health and psychosocial support, the main researcher responsible for the PhD project can help you to access appropriate services <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">(sophia.lobanov-rostovsky@lshtm.ac.uk)</a>. If you prefer to contact the services yourself, please visit:</p>
 
-            <div class="table-container">
-  <table border="1">
-    <thead>
+            <table style="width:100%; border-collapse: collapse;" border="1">
+              <thead>
                 <tr>
                   <th style="padding: 10px; background-color: #e0e0e0;">Service</th>
                   <th style="padding: 10px; background-color: #e0e0e0;">Support provided</th>
@@ -375,9 +403,8 @@
             
 <h3> Екстрені/Термінові служби </h3>
 
-<div class="table-container">
-  <table border="1">
-    <thead>
+<table style="width:100%; border-collapse: collapse;" border="1">
+  <thead>
     <tr>
       <th style="padding: 10px; background-color: #e0e0e0;">Сервіс</th>
       <th style="padding: 10px; background-color: #e0e0e0;">Допомога, яка надається</th>
@@ -432,9 +459,8 @@
             <p>
               Якщо ви вважаєте, що вам була б корисна професійна регулярну підтримка у сфері психічного здоров’я та психосоціальної підтримки, дослідниця може допомогти вам отримати доступ до відповідних послуг <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">(sophia.lobanov-rostovsky@lshtm.ac.uk).</a> Якщо ви бажаєте самостійно звернутися до служб, будь ласка, відвідайте наступні посилання: </p>
 
-          <div class="table-container">
-  <table border="1">
-    <thead>
+            <table style="width:100%; border-collapse: collapse;" border="1">
+              <thead>
                 <tr>
                   <th style="padding: 10px; background-color: #e0e0e0;">Сервіс</th>
                   <th style="padding: 10px; background-color: #e0e0e0;">Допомога</th>
