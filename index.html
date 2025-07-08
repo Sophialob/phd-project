@@ -3,101 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
-  <title>Participant Information</title>
+  <title>Language Toggle Test</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
     }
 
     #top-banner {
       background-color: #007bff;
       color: white;
+      padding: 10px;
       text-align: center;
-      padding: 10px 0;
-      font-size: 18px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 9999;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    #top-banner a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    #top-banner a:hover {
-      color: #cce5ff;
     }
 
     header {
-      background-color: white;
-      color: #333;
-      padding: 80px 0 10px;
       text-align: center;
-      margin-top: 60px;
-    }
-
-    h1, h2, h3 {
-      color: #2c3e50;
-      font-weight: bold;
-    }
-
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      margin-top: 20px;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
+      gap: 20px;
+      margin-top: 20px;
     }
 
     .sidebar {
-      width: 220px;
+      width: 200px;
+      background: #f0f0f0;
       padding: 20px;
-      background-color: #f0f0f0;
-      height: 100vh;
-      position: sticky;
-      top: 70px;
-      overflow-y: auto;
     }
 
     .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
+      list-style-type: disc;
+      padding-left: 20px;
     }
 
     .sidebar li {
       margin-bottom: 10px;
-    }
-
-    .main {
-      flex-grow: 1;
-      padding: 20px;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 10px 20px 30px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
     .language-section {
@@ -107,75 +49,41 @@
     .language-section.active {
       display: block;
     }
-
-    select {
-      font-size: 14px;
-      padding: 8px 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
-    .footer-logos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 40px auto;
-      gap: 20px;
-    }
-
-    .footer-logo {
-      max-height: 100px;
-      width: auto;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-    }
   </style>
 </head>
 <body>
+
   <div id="top-banner">
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA" id="link-survey-banner-en">Click here to go to the survey</a>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+    <a id="link-survey-banner-en" href="#">English Survey Link</a>
+    <a id="link-survey-banner-uk" href="#" style="display: none;">Українське посилання на опитування</a>
   </div>
 
   <header>
-    <h1 class="header">
-      <span id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
-      <span id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
+    <h1>
+      <span id="header-en">Header in English</span>
+      <span id="header-uk" style="display: none;">Заголовок українською</span>
     </h1>
     <select onchange="switchLanguage(this.value)">
-      <option value="en">English</option>
+      <option value="en" selected>English</option>
       <option value="uk">Ukrainian</option>
     </select>
   </header>
 
   <div class="container">
-    <div id="contents" class="sidebar">
+    <div class="sidebar">
       <h3 id="sidebar-header-en">Contents</h3>
-      <h3 id="sidebar-header-uk" style="display:none;">Зміст</h3>
+      <h3 id="sidebar-header-uk" style="display: none;">Зміст</h3>
       <ul>
-        <li id="link-info-en"><a href="javascript:void(0);" onclick="scrollToSection('lang-en')">Participant Information</a></li>
-        <li id="link-info-uk" style="display:none;"><a href="javascript:void(0);" onclick="scrollToSection('lang-uk')">Інформація для учасниць</a></li>
+        <li id="link-info-en"><a href="#">Participant Info</a></li>
+        <li id="link-info-uk" style="display: none;"><a href="#">Інформація для учасниць</a></li>
 
-        <li id="link-survey-en"><a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA">Click here to go to the survey</a></li>
-        <li id="link-survey-uk" style="display:none;"><a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA">Натисніть тут, щоб пройти опитування</a></li>
+        <li id="link-survey-en"><a href="#">Survey Link</a></li>
+        <li id="link-survey-uk" style="display: none;"><a href="#">Опитування</a></li>
 
-        <li id="link-contact-en"><a href="contact.html">Help & Contact Information</a></li>
-        <li id="link-contact-uk" style="display:none;"><a href="contact.html">Довідка та Контактна інформація</a></li>
+        <li id="link-contact-en"><a href="#">Help & Contact Info</a></li>
+        <li id="link-contact-uk" style="display: none;"><a href="#">Довідка та Контактна інформація</a></li>
       </ul>
     </div>
-
 
     <main class="main">
       <!-- English Content -->
@@ -307,42 +215,34 @@ Findings from this project will be published in a PhD thesis which will be avail
 
   <script>
     function switchLanguage(lang) {
-      const otherLang = lang === 'en' ? 'uk' : 'en';
+      const isEnglish = lang === 'en';
 
-      document.getElementById(`header-${lang}`).style.display = 'inline';
-      document.getElementById(`header-${otherLang}`).style.display = 'none';
+      // Top banner
+      document.getElementById('link-survey-banner-en').style.display = isEnglish ? 'inline' : 'none';
+      document.getElementById('link-survey-banner-uk').style.display = isEnglish ? 'none' : 'inline';
 
-      document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
-      document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
+      // Headers
+      document.getElementById('header-en').style.display = isEnglish ? 'inline' : 'none';
+      document.getElementById('header-uk').style.display = isEnglish ? 'none' : 'inline';
 
-      const sectionLang = document.getElementById(`lang-${lang}`);
-      const sectionOther = document.getElementById(`lang-${otherLang}`);
-      if (sectionLang) sectionLang.classList.add('active');
-      if (sectionOther) sectionOther.classList.remove('active');
+      // Sidebar headers
+      document.getElementById('sidebar-header-en').style.display = isEnglish ? 'block' : 'none';
+      document.getElementById('sidebar-header-uk').style.display = isEnglish ? 'none' : 'block';
 
-      document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
-      document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
+      // Sidebar links
+      document.getElementById('link-info-en').style.display = isEnglish ? 'list-item' : 'none';
+      document.getElementById('link-info-uk').style.display = isEnglish ? 'none' : 'list-item';
 
-      document.getElementById(`link-info-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-info-${otherLang}`).style.display = 'none';
+      document.getElementById('link-survey-en').style.display = isEnglish ? 'list-item' : 'none';
+      document.getElementById('link-survey-uk').style.display = isEnglish ? 'none' : 'list-item';
 
-      document.getElementById(`link-survey-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
+      document.getElementById('link-contact-en').style.display = isEnglish ? 'list-item' : 'none';
+      document.getElementById('link-contact-uk').style.display = isEnglish ? 'none' : 'list-item';
 
-      document.getElementById(`link-contact-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
+      // Language sections
+      document.getElementById('lang-en').classList.toggle('active', isEnglish);
+      document.getElementById('lang-uk').classList.toggle('active', !isEnglish);
     }
-
-    function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      switchLanguage('en');
-    });
   </script>
 </body>
 </html>
