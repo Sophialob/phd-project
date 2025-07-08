@@ -141,6 +141,30 @@
         height: auto;
         position: relative;
       }
+
+      .table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+@media (max-width: 600px) {
+  table th,
+  table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    word-break: break-word;
+  }
+}
     }
   </style>
 </head>
