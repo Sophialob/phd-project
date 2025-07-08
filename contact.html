@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
-  <title>Help & Contact INformation</title>
+  <title>Help & Contact Information</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -33,7 +33,6 @@
     #top-banner a {
       color: white;
       text-decoration: underline;
-      margin: 0 10px;
     }
 
     #top-banner a:hover {
@@ -45,6 +44,7 @@
       color: #333;
       padding: 80px 0 10px;
       text-align: center;
+      margin-top: 60px;
     }
 
     h1, h2, h3 {
@@ -64,7 +64,6 @@
     .container {
       display: flex;
       flex-direction: row;
-      gap: 20px;
     }
 
     .sidebar {
@@ -78,19 +77,19 @@
     }
 
     .sidebar ul {
-      list-style: none;
+      list-style: disc inside;
       padding-left: 0;
       margin: 0;
     }
 
     .sidebar li {
       margin-bottom: 10px;
+      list-style-type: disc;
     }
 
     .main {
       flex-grow: 1;
       padding: 20px;
-      max-width: 800px;
     }
 
     main {
@@ -119,18 +118,12 @@
       cursor: pointer;
     }
 
-    .logo-sidebar {
-      width: 160px;
-      padding: 20px;
-      background-color: #fafafa;
-      height: 100vh;
-      position: sticky;
-      top: 70px;
+    .footer-logos {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.05);
+      margin: 40px auto;
+      gap: 20px;
     }
 
     .footer-logo {
@@ -143,71 +136,46 @@
         flex-direction: column;
       }
 
-      .sidebar, .logo-sidebar {
+      .sidebar {
         width: 100%;
         height: auto;
         position: relative;
-        box-shadow: none;
       }
-    }
-
-    table th:nth-child(4),
-    table td:nth-child(4) {
-      width: 20%;
-    }
-
-    table {
-      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <!-- TOP BANNER -->
   <div id="top-banner">
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-en">Click here to go to the survey</a>
-    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA" id="link-survey-banner-en">Click here to go to the survey</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
   </div>
 
-  <!-- HEADER -->
   <header>
     <h1 class="header">
-      <span class="header-text" id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
-      <span class="header-text" id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
+      <span id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
+      <span id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
     </h1>
     <select onchange="switchLanguage(this.value)">
-      <option value="en" selected>English</option>
+      <option value="en">English</option>
       <option value="uk">Ukrainian</option>
     </select>
   </header>
 
-  <!-- MAIN CONTENT -->
   <div class="container">
-    <!-- SIDEBAR -->
     <div id="contents" class="sidebar">
       <h3 id="sidebar-header-en">Contents</h3>
-      <h3 id="sidebar-header-uk" style="display: none;">Зміст</h3>
+      <h3 id="sidebar-header-uk" style="display:none;">Зміст</h3>
       <ul>
-        <li id="link-info-en">
-          <a href="index.html">Participant Information</a>
-        </li>
-        <li id="link-info-uk" style="display: none;">
-          <a href="index.html">Інформація для учасниць</a>
-        </li>
-        <li id="link-survey-en">
-          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6">Click here to go to the survey</a>
-        </li>
-        <li id="link-survey-uk" style="display: none;">
-          <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA?st=ucoWxv4C6cOx9SgJvTrOTGNIgNMztK7rAmnxDA454X9PvMIcdXwcWn8!u4j6DjB6">Натисніть тут, щоб пройти опитування</a>
-        </li>
-        <li id="link-contact-en">
-          <a href="contact.html">Help & Contact Information</a>
-        </li>
-        <li id="link-info-uk" style="display: none;">
-          <a href="index.html">Довідка та Контактна інформація</a>
-        </li>
+        <li id="link-info-en"><a href="javascript:void(0);" onclick="scrollToSection('lang-en')">Participant Information</a></li>
+        <li id="link-info-uk" style="display:none;"><a href="javascript:void(0);" onclick="scrollToSection('lang-uk')">Інформація для учасниць</a></li>
+
+        <li id="link-survey-en"><a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA">Click here to go to the survey</a></li>
+        <li id="link-survey-uk" style="display:none;"><a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA">Натисніть тут, щоб пройти опитування</a></li>
+
+        <li id="link-contact-en"><a href="contact.html">Help & Contact Information</a></li>
+        <li id="link-contact-uk" style="display:none;"><a href="contact.html">Довідка та Контактна інформація</a></li>
       </ul>
     </div>
-
 
     <div class="main">
       <main>
