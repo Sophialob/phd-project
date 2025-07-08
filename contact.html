@@ -141,30 +141,6 @@
         height: auto;
         position: relative;
       }
-
-      .table-container {
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
-}
-
-@media (max-width: 600px) {
-  table th,
-  table td {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  th,
-  td {
-    word-break: break-word;
-  }
-}
     }
   </style>
 </head>
@@ -224,9 +200,8 @@ table {
            
 <h3> Emergency/Urgent Services </h3>
 
-<div class="table-container">
-  <table border="1">
-    <thead>
+<table style="width:100%; border-collapse: collapse;" border="1">
+  <thead>
     <tr>
       <th style="padding: 10px; background-color: #e0e0e0;">Service</th>
       <th style="padding: 10px; background-color: #e0e0e0;">Support provided</th>
@@ -672,5 +647,6 @@ table {
   </script>
 </body>
 </html>
+
 
 
