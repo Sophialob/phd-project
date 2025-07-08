@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
   <title>Participant Information</title>
   <style>
     body {
@@ -32,7 +31,10 @@
     #top-banner a {
       color: white;
       text-decoration: underline;
-      margin: 0 10px;
+    }
+
+    #top-banner a:hover {
+      color: #cce5ff;
     }
 
     header {
@@ -41,6 +43,20 @@
       padding: 80px 0 10px;
       text-align: center;
       margin-top: 60px;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -127,14 +143,14 @@
 </head>
 <body>
   <div id="top-banner">
-    <a href="#" id="link-survey-banner-en">Click here to go to the survey</a>
-    <a href="#" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA" id="link-survey-banner-en">Click here to go to the survey</a>
+    <a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA" id="link-survey-banner-uk" style="display:none;">Натисніть тут, щоб пройти опитування</a>
   </div>
 
   <header>
     <h1 class="header">
-      <span id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women in the UK</span>
-      <span id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат</span>
+      <span id="header-en">Coping and help-seeking among Ukrainian adolescent girls and young women living in the UK since the onset of the Russia-Ukraine war</span>
+      <span id="header-uk" style="display:none;">Подолання труднощів та пошук допомоги серед українських дівчат-підлітків та молодих жінок, які проживають у Великій Британії з початку російсько-української війни</span>
     </h1>
     <select onchange="switchLanguage(this.value)">
       <option value="en">English</option>
@@ -146,18 +162,18 @@
     <div id="contents" class="sidebar">
       <h3 id="sidebar-header-en">Contents</h3>
       <h3 id="sidebar-header-uk" style="display:none;">Зміст</h3>
-
       <ul>
         <li id="link-info-en"><a href="javascript:void(0);" onclick="scrollToSection('lang-en')">Participant Information</a></li>
         <li id="link-info-uk" style="display:none;"><a href="javascript:void(0);" onclick="scrollToSection('lang-uk')">Інформація для учасниць</a></li>
 
-        <li id="link-survey-en"><a href="#">Click here to go to the survey</a></li>
-        <li id="link-survey-uk" style="display:none;"><a href="#">Натисніть тут, щоб пройти опитування</a></li>
+        <li id="link-survey-en"><a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA">Click here to go to the survey</a></li>
+        <li id="link-survey-uk" style="display:none;"><a href="https://central.lshtm.ac.uk/-/single/Pn9gTwJeNigoFXyoUK2NU6fUdKTXjNA">Натисніть тут, щоб пройти опитування</a></li>
 
         <li id="link-contact-en"><a href="contact.html">Help & Contact Information</a></li>
         <li id="link-contact-uk" style="display:none;"><a href="contact.html">Довідка та Контактна інформація</a></li>
       </ul>
     </div>
+
 
 
     <main class="main">
@@ -288,41 +304,45 @@ Findings from this project will be published in a PhD thesis which will be avail
     <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Logo" class="footer-logo" />
   </div>
 
- <script>
-  function switchLanguage(lang) {
-    const otherLang = lang === 'en' ? 'uk' : 'en';
+  <script>
+    function switchLanguage(lang) {
+      const otherLang = lang === 'en' ? 'uk' : 'en';
 
-    // Toggle headers
-    document.getElementById(`header-${lang}`).style.display = 'inline';
-    document.getElementById(`header-${otherLang}`).style.display = 'none';
+      document.getElementById(`header-${lang}`).style.display = 'inline';
+      document.getElementById(`header-${otherLang}`).style.display = 'none';
 
-    // Toggle banner
-    document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
-    document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
+      document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
+      document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
 
-    // Toggle main sections
-    document.getElementById(`lang-${lang}`).classList.add('active');
-    document.getElementById(`lang-${otherLang}`).classList.remove('active');
+      const sectionLang = document.getElementById(`lang-${lang}`);
+      const sectionOther = document.getElementById(`lang-${otherLang}`);
+      if (sectionLang) sectionLang.classList.add('active');
+      if (sectionOther) sectionOther.classList.remove('active');
 
-    // Toggle sidebar headers
-    document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
-    document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
+      document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
+      document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
 
-    // Toggle list items
-    document.getElementById(`link-info-${lang}`).style.display = 'list-item';
-    document.getElementById(`link-info-${otherLang}`).style.display = 'none';
+      document.getElementById(`link-info-${lang}`).style.display = 'list-item';
+      document.getElementById(`link-info-${otherLang}`).style.display = 'none';
 
-    document.getElementById(`link-survey-${lang}`).style.display = 'list-item';
-    document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
+      document.getElementById(`link-survey-${lang}`).style.display = 'list-item';
+      document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
 
-    document.getElementById(`link-contact-${lang}`).style.display = 'list-item';
-    document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
-  }
+      document.getElementById(`link-contact-${lang}`).style.display = 'list-item';
+      document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
+    }
 
-  window.addEventListener('DOMContentLoaded', function () {
-    switchLanguage('en');
-  });
-</script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      switchLanguage('en');
+    });
+  </script>
 </body>
 </html>
 
