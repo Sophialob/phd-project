@@ -6,143 +6,168 @@
   <meta name="description" content="Information Sheet for PhD Study on Coping and Help-seeking among Ukrainian Adolescent Girls and Young Women in the UK" />
   <title>Help/Contact Information</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
 
-    #top-banner {
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 18px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 9999;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+  #top-banner {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
 
-    #top-banner a {
-      color: white;
-      text-decoration: underline;
-    }
+  #top-banner a {
+    color: white;
+    text-decoration: underline;
+  }
 
-    #top-banner a:hover {
-      color: #cce5ff;
-    }
+  #top-banner a:hover {
+    color: #cce5ff;
+  }
 
-    header {
-      background-color: white;
-      color: #333;
-      padding: 80px 0 10px;
-      text-align: center;
-      margin-top: 60px;
-    }
+  header {
+    background-color: white;
+    color: #333;
+    padding: 80px 0 10px;
+    text-align: center;
+    margin-top: 60px;
+  }
 
-    h1, h2, h3 {
-      color: #2c3e50;
-      font-weight: bold;
-    }
+  h1, h2, h3 {
+    color: #2c3e50;
+    font-weight: bold;
+  }
 
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
+  a {
+    color: #2980b9;
+    text-decoration: none;
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
+  a:hover {
+    text-decoration: underline;
+  }
 
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* ✅ Added for better responsiveness */
+  }
+
+  .sidebar {
+    width: 220px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    height: 100vh;
+    position: sticky;
+    top: 70px;
+    overflow-y: auto;
+  }
+
+  .sidebar ul {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+  }
+
+  .main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 20px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .language-section {
+    display: none;
+  }
+
+  .language-section.active {
+    display: block;
+  }
+
+  select {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .footer-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    max-height: 100px;
+    width: auto;
+  }
+
+  /* ✅ Existing mobile tweaks */
+  @media (max-width: 768px) {
     .container {
-      display: flex;
-      flex-direction: row;
+      flex-direction: column;
     }
 
     .sidebar {
-      width: 220px;
-      padding: 20px;
-      background-color: #f0f0f0;
-      height: 100vh;
-      position: sticky;
-      top: 70px;
-      overflow-y: auto;
+      width: 100%;
+      height: auto;
+      position: relative; /* ✅ Changed from sticky to static */
     }
+  }
 
-    .sidebar ul {
-      list-style: disc inside;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    .sidebar li {
-      margin-bottom: 10px;
-      list-style-type: disc;
-    }
-
-    .main {
-      flex-grow: 1;
-      padding: 20px;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 10px 20px 30px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .language-section {
-      display: none;
-    }
-
-    .language-section.active {
-      display: block;
+  /* ✅ New for small devices */
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.2rem;
+      padding: 10px;
     }
 
     select {
-      font-size: 14px;
-      padding: 8px 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-      cursor: pointer;
+      width: 100%;
     }
 
-    .footer-logos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 40px auto;
-      gap: 20px;
+    table, thead, tbody, th, td, tr {
+      display: block;
+      width: 100%;
     }
 
-    .footer-logo {
-      max-height: 100px;
-      width: auto;
+    th, td {
+      box-sizing: border-box;
+      word-wrap: break-word;
+      padding: 8px 10px;
     }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <div id="top-banner">
@@ -200,8 +225,9 @@
            
 <h3> Emergency/Urgent Services </h3>
 
-<table style="width:100%; border-collapse: collapse;" border="1">
-  <thead>
+<div style="overflow-x: auto;">
+  <table style="width:100%; border-collapse: collapse;" border="1">
+    <thead>
     <tr>
       <th style="padding: 10px; background-color: #e0e0e0;">Service</th>
       <th style="padding: 10px; background-color: #e0e0e0;">Support provided</th>
@@ -256,8 +282,9 @@
                 
   </p> If you feel that you would benefit from professional mental health and psychosocial support, the main researcher responsible for the PhD project can help you to access appropriate services <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">(sophia.lobanov-rostovsky@lshtm.ac.uk)</a>. If you prefer to contact the services yourself, please visit:</p>
 
-            <table style="width:100%; border-collapse: collapse;" border="1">
-              <thead>
+           <div style="overflow-x: auto;">
+  <table style="width:100%; border-collapse: collapse;" border="1">
+    <thead>
                 <tr>
                   <th style="padding: 10px; background-color: #e0e0e0;">Service</th>
                   <th style="padding: 10px; background-color: #e0e0e0;">Support provided</th>
@@ -389,7 +416,7 @@
         
     </tr>
  </tbody>
-            </table>
+</table>
           </div> <!-- end lang-en -->
 
           <div id="lang-uk" class="language-section">
@@ -403,8 +430,9 @@
             
 <h3> Екстрені/Термінові служби </h3>
 
-<table style="width:100%; border-collapse: collapse;" border="1">
-  <thead>
+<div style="overflow-x: auto;">
+  <table style="width:100%; border-collapse: collapse;" border="1">
+    <thead>
     <tr>
       <th style="padding: 10px; background-color: #e0e0e0;">Сервіс</th>
       <th style="padding: 10px; background-color: #e0e0e0;">Допомога, яка надається</th>
@@ -459,8 +487,9 @@
             <p>
               Якщо ви вважаєте, що вам була б корисна професійна регулярну підтримка у сфері психічного здоров’я та психосоціальної підтримки, дослідниця може допомогти вам отримати доступ до відповідних послуг <a href="mailto:sophia.lobanov-rostovsky@lshtm.ac.uk">(sophia.lobanov-rostovsky@lshtm.ac.uk).</a> Якщо ви бажаєте самостійно звернутися до служб, будь ласка, відвідайте наступні посилання: </p>
 
-            <table style="width:100%; border-collapse: collapse;" border="1">
-              <thead>
+            <div style="overflow-x: auto;">
+  <table style="width:100%; border-collapse: collapse;" border="1">
+    <thead>
                 <tr>
                   <th style="padding: 10px; background-color: #e0e0e0;">Сервіс</th>
                   <th style="padding: 10px; background-color: #e0e0e0;">Допомога</th>
