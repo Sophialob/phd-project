@@ -316,49 +316,48 @@ Findings from this project will be published in a PhD thesis which will be avail
   </div>
 
   <!-- Script -->
-  <script>
-    function switchLanguage(lang) {
-      const otherLang = lang === 'en' ? 'uk' : 'en';
+<script>
+  function switchLanguage(lang) {
+    const otherLang = lang === 'en' ? 'uk' : 'en';
 
-      // Header
-      document.getElementById(`header-${lang}`).style.display = 'inline';
-      document.getElementById(`header-${otherLang}`).style.display = 'none';
+    // Header
+    document.getElementById(`header-${lang}`).style.display = 'inline';
+    document.getElementById(`header-${otherLang}`).style.display = 'none';
 
-      // Banner
-      document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
-      document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
+    // Banner
+    document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
+    document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
 
-      // Main content
-      document.getElementById(`lang-${lang}`).classList.add('active');
-      document.getElementById(`lang-${otherLang}`).classList.remove('active');
+    // Main content
+    document.getElementById(`lang-${lang}`)?.classList.add('active');
+    document.getElementById(`lang-${otherLang}`)?.classList.remove('active');
 
-      // Sidebar
-      document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
-      document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
+    // Sidebar headers
+    document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
+    document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
 
-      document.getElementById(`link-info-${lang}`).style.display = 'block';
-      document.getElementById(`link-info-${otherLang}`).style.display = 'none';
+    // Sidebar links
+    document.getElementById(`link-info-${lang}`).style.display = 'inline';
+    document.getElementById(`link-info-${otherLang}`).style.display = 'none';
 
-      document.getElementById(`link-survey-${lang}`).style.display = 'block';
-      document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
+    document.getElementById(`link-survey-${lang}`).style.display = 'inline';
+    document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
 
-      document.getElementById(`link-contact-${lang}`).style.display = 'block';
-      document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
+    document.getElementById(`link-contact-${lang}`).style.display = 'inline';
+    document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
+  }
+
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
     }
+  }
 
-    function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      switchLanguage('en');
-    });
-  </script>
-</body>
-</html>
+  window.addEventListener('DOMContentLoaded', () => {
+    switchLanguage('en');
+  });
+</script>
 
 
 
