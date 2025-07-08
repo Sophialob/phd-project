@@ -77,13 +77,14 @@
     }
 
     .sidebar ul {
-      list-style: none;
+      list-style: disc inside;
       padding-left: 0;
       margin: 0;
     }
 
     .sidebar li {
       margin-bottom: 10px;
+      list-style-type: disc;
     }
 
     .main {
@@ -299,7 +300,7 @@ Findings from this project will be published in a PhD thesis which will be avail
 <p> Дякуємо, що знайшли час, щоб прочитати цю інформацію. Якщо ви вважаєте, що бажаєте взяти участь у дослідженні, перейдіть на цю сторінку, де вам потрібно підтвердити відповідність вимогам і надати інформовану згоду. Після того, як ви надасте свою згоду, ви зможете взяти участь в опитуванні. Якщо у вас виникли запитання щодо цього дослідження, будь ласка, зв’яжіться з головною дослідницею, відповідальною за цей проєкт (Софія Лобанова-Ростовська, sophia.lobanov-rostovsky@lshtm.ac.uk). </p>
     </main>
 
-<div class="footer-logos">
+ <div class="footer-logos">
     <img src="assets/LSHTM square.png" alt="LSHTM Logo" class="footer-logo" />
     <img src="assets/USC logo.png" alt="USC Logo" class="footer-logo" />
     <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Logo" class="footer-logo" />
@@ -309,28 +310,29 @@ Findings from this project will be published in a PhD thesis which will be avail
     function switchLanguage(lang) {
       const otherLang = lang === 'en' ? 'uk' : 'en';
 
+      // Header text
       document.getElementById(`header-${lang}`).style.display = 'inline';
       document.getElementById(`header-${otherLang}`).style.display = 'none';
 
+      // Banner links
       document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
       document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
 
-      const sectionLang = document.getElementById(`lang-${lang}`);
-      const sectionOther = document.getElementById(`lang-${otherLang}`);
-      if (sectionLang) sectionLang.classList.add('active');
-      if (sectionOther) sectionOther.classList.remove('active');
+      // Content sections
+      document.getElementById(`lang-${lang}`).classList.add('active');
+      document.getElementById(`lang-${otherLang}`).classList.remove('active');
 
+      // Sidebar headers
       document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
       document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
 
-      document.getElementById(`link-info-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-info-${otherLang}`).style.display = 'none';
-
-      document.getElementById(`link-survey-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
-
-      document.getElementById(`link-contact-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
+      // Sidebar links
+      ['info', 'survey', 'contact'].forEach(section => {
+        const show = document.getElementById(`link-${section}-${lang}`);
+        const hide = document.getElementById(`link-${section}-${otherLang}`);
+        if (show) show.style.display = 'list-item';
+        if (hide) hide.style.display = 'none';
+      });
     }
 
     function scrollToSection(id) {
