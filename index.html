@@ -306,43 +306,39 @@ Findings from this project will be published in a PhD thesis which will be avail
   </div>
 
   <script>
-    function switchLanguage(lang) {
-      const otherLang = lang === 'en' ? 'uk' : 'en';
+   function switchLanguage(lang) {
+  const otherLang = lang === 'en' ? 'uk' : 'en';
 
-      document.getElementById(`header-${lang}`).style.display = 'inline';
-      document.getElementById(`header-${otherLang}`).style.display = 'none';
+  document.getElementById(`header-${lang}`).style.display = 'inline';
+  document.getElementById(`header-${otherLang}`).style.display = 'none';
 
-      document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
-      document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
+  document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
+  document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
 
-      const sectionLang = document.getElementById(`lang-${lang}`);
-      const sectionOther = document.getElementById(`lang-${otherLang}`);
-      if (sectionLang) sectionLang.classList.add('active');
-      if (sectionOther) sectionOther.classList.remove('active');
+  const sectionLang = document.getElementById(`lang-${lang}`);
+  const sectionOther = document.getElementById(`lang-${otherLang}`);
+  if (sectionLang) sectionLang.classList.add('active');
+  if (sectionOther) sectionOther.classList.remove('active');
 
-      document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
-      document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
+  document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
+  document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
 
-      document.getElementById(`link-info-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-info-${otherLang}`).style.display = 'none';
-
-      document.getElementById(`link-survey-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
-
-      document.getElementById(`link-contact-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
+  // Toggle visibility
+  const links = ['info', 'survey', 'contact'];
+  links.forEach((item) => {
+    const show = document.getElementById(`link-${item}-${lang}`);
+    const hide = document.getElementById(`link-${item}-${otherLang}`);
+    
+    if (show) {
+      show.style.display = 'list-item';
+      show.querySelector('a').classList.add('active-link');
     }
-
-    function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
-      }
+    if (hide) {
+      hide.style.display = 'none';
+      hide.querySelector('a').classList.remove('active-link');
     }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      switchLanguage('en');
-    });
+  });
+}
   </script>
 </body>
 </html>
