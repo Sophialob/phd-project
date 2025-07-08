@@ -77,21 +77,31 @@
     overflow-y: auto;
   }
 
-  .sidebar ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
+ .sidebar {
+  width: 220px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  height: 100vh;
+  position: sticky;
+  top: 70px;
+  overflow-y: auto;
+}
 
-  .sidebar li {
-    margin-bottom: 10px;
-    padding-left: 0;
-    list-style-type: none;
-  }
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
 
-  .sidebar h3 {
-    margin-left: 5px; /* Aligns heading with list items */
-  }
+.sidebar li {
+  margin-bottom: 10px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.sidebar h3 {
+  margin-left: 2px; /* Aligns heading with list items */
+}
 
     .main {
       flex-grow: 1;
