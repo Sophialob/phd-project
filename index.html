@@ -288,48 +288,41 @@ Findings from this project will be published in a PhD thesis which will be avail
     <img src="assets/Sanctuary Foundation.png" alt="Sanctuary Logo" class="footer-logo" />
   </div>
 
-  <script>
-    function switchLanguage(lang) {
-      const otherLang = lang === 'en' ? 'uk' : 'en';
+ <script>
+  function switchLanguage(lang) {
+    const otherLang = lang === 'en' ? 'uk' : 'en';
 
-      // Header
-      document.getElementById(`header-${lang}`).style.display = 'inline';
-      document.getElementById(`header-${otherLang}`).style.display = 'none';
+    // Toggle headers
+    document.getElementById(`header-${lang}`).style.display = 'inline';
+    document.getElementById(`header-${otherLang}`).style.display = 'none';
 
-      // Banner
-      document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
-      document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
+    // Toggle banner
+    document.getElementById(`link-survey-banner-${lang}`).style.display = 'inline';
+    document.getElementById(`link-survey-banner-${otherLang}`).style.display = 'none';
 
-      // Content
-      document.getElementById(`lang-${lang}`).classList.add('active');
-      document.getElementById(`lang-${otherLang}`).classList.remove('active');
+    // Toggle main sections
+    document.getElementById(`lang-${lang}`).classList.add('active');
+    document.getElementById(`lang-${otherLang}`).classList.remove('active');
 
-      // Sidebar headers
-      document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
-      document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
+    // Toggle sidebar headers
+    document.getElementById(`sidebar-header-${lang}`).style.display = 'block';
+    document.getElementById(`sidebar-header-${otherLang}`).style.display = 'none';
 
-      // Sidebar links
-      document.getElementById(`link-info-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-info-${otherLang}`).style.display = 'none';
+    // Toggle list items
+    document.getElementById(`link-info-${lang}`).style.display = 'list-item';
+    document.getElementById(`link-info-${otherLang}`).style.display = 'none';
 
-      document.getElementById(`link-survey-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
+    document.getElementById(`link-survey-${lang}`).style.display = 'list-item';
+    document.getElementById(`link-survey-${otherLang}`).style.display = 'none';
 
-      document.getElementById(`link-contact-${lang}`).style.display = 'list-item';
-      document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
-    }
+    document.getElementById(`link-contact-${lang}`).style.display = 'list-item';
+    document.getElementById(`link-contact-${otherLang}`).style.display = 'none';
+  }
 
-    function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      switchLanguage('en');
-    });
-  </script>
+  window.addEventListener('DOMContentLoaded', function () {
+    switchLanguage('en');
+  });
+</script>
 </body>
 </html>
 
