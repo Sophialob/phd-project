@@ -82,11 +82,10 @@
       margin: 0;
     }
 
-   .sidebar li {
-  margin-bottom: 10px;
-  list-style-type: disc;
-  display: list-item !important;
-}
+    .sidebar li {
+      margin-bottom: 10px;
+      list-style-type: disc;
+    }
 
     .main {
       flex-grow: 1;
@@ -329,11 +328,12 @@ Findings from this project will be published in a PhD thesis which will be avail
 
       // Sidebar links
       ['info', 'survey', 'contact'].forEach(section => {
-  const show = document.getElementById(`link-${section}-${lang}`);
-  const hide = document.getElementById(`link-${section}-${otherLang}`);
-  if (show) show.style.removeProperty('display');
-  if (hide) hide.style.display = 'none';
-});
+        const show = document.getElementById(`link-${section}-${lang}`);
+        const hide = document.getElementById(`link-${section}-${otherLang}`);
+        if (show) show.style.display = 'list-item';
+        if (hide) hide.style.display = 'none';
+      });
+    }
 
     function scrollToSection(id) {
       const el = document.getElementById(id);
@@ -348,6 +348,7 @@ Findings from this project will be published in a PhD thesis which will be avail
   </script>
 </body>
 </html>
+
 
 
 
